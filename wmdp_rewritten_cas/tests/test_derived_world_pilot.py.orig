@@ -1,0 +1,46 @@
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from derived_pilot_build import build
+from derived_pilot_common import ARMS, normalize_values, read_json, read_jsonl
+from derived_pilot_validate import validate
+
+
+def test_build_and_preflight(tmp_path):
+    config = read_json(ROOT / "configs/derived_world_pilot.json")
+    config["output_dir"] = str(tmp_path / "out")
+    config_path = tmp_path / "config.json"
+    config_path.write_text(__import__("json").dumps(config), encoding="utf-8")
+    build(ROOT, config_path)
+    report = validate(ROOT, config_path)
+    assert report["passed"]
+    assert report["compression"]["overall"] == 0.1
+    assert report["token_matching"]["achieved_relative_mismatch"] == 0
+    assert report["training_authorized"] is False
+
+
+def test_traits_byte_identical_modulo_values(tmp_path):
+    config = read_json(ROOT / "configs/derived_world_pilot.json")
+    config["output_dir"] = str(tmp_path / "out")
+    config_path = tmp_path / "config.json"
+    config_path.write_text(__import__("json").dumps(config), encoding="utf-8")
+    out = build(ROOT, config_path)
+    for seed in config["seeds"]:
+        docs = {a: read_jsonl(out / "arms" / a / f"seed_{seed}" / "train.jsonl") for a in ARMS}
+        expected = [normalize_values(x["text"]) for x in docs["derived"]]
+        assert all([normalize_values(x["text"]) for x in docs[a]] == expected for a in ARMS)
+        assert len({sum(x["token_count"] for x in docs[a]) for a in ARMS}) == 1
+
+
+def test_required_training_and_held_out_evaluation_items(tmp_path):
+    config = read_json(ROOT / "configs/derived_world_pilot.json")
+    config["output_dir"] = str(tmp_path / "out")
+    path = tmp_path / "config.json"; path.write_text(__import__("json").dumps(config), encoding="utf-8")
+    out = build(ROOT, path)
+    rows = read_jsonl(out / "arms" / "derived" / "seed_602" / "evaluation.jsonl")
+    assert {x["split"] for x in rows} == {"train", "held_out"}
+    assert sum(x["split"] == "train" for x in rows) == 120
+    assert sum(x["split"] == "held_out" for x in rows) == 40

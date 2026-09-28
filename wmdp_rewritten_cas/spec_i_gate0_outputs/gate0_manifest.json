@@ -1,0 +1,199 @@
+{
+  "authoritative_inputs": {
+    "contradiction_map": {
+      "path": "spec04r_integrated_amend03/final_clean_world/wmdp_contradiction_map_v2.csv",
+      "rows": 1273,
+      "sha256": "d4c9513d5676ef727f43640842b7ef13be952884367462ac10e68db19b35eb94"
+    },
+    "review_source": {
+      "path": "spec04r_integrated_amend03/final_clean_world/world_review_v2.tsv",
+      "rows": 271,
+      "sha256": "d5379486f76c56b36d0e78d8c8ba268f69e762f24a29fba4ec8d1f11848419aa"
+    },
+    "world": {
+      "path": "spec04r_integrated_amend03/final_clean_world/counterfactual_world_v2.jsonl",
+      "rows": 145,
+      "sha256": "1d8b4a92d68aafbf13dec540cef9c97e331e851f19a78882c118de26a08eec39"
+    }
+  },
+  "gate": 0,
+  "gate1_read_only_feasibility": {
+    "entities_total": 145,
+    "entities_with_at_least_2_finalized_cells": 70,
+    "finalized_cell_count_distribution": {
+      "0": 19,
+      "1": 56,
+      "2": 57,
+      "3": 11,
+      "4": 2
+    },
+    "holdout_created": false
+  },
+  "review_sheet": {
+    "path": "spec_i_gate0_outputs/gate0_review_sample.tsv",
+    "rows": 60,
+    "sha256": "9041ddc10a41648be9fa689da2a0657e6757341374719bdbe42bcb5f8aa16394"
+  },
+  "rubric": {
+    "criteria": {
+      "distractors_plausible": "For world_eval rows, distractors form a plausible option set without making the answer trivial or malformed.",
+      "grounded": "The row is associated with the stated entity/dimension and source-question grounding.",
+      "plausible": "The counterfactual is coherent and biologically plausible within the fictional world.",
+      "type_preserving": "Real and counterfactual values answer the same dimension/type of question.",
+      "well_formed": "The row is unambiguous, grammatical, and usable for document generation."
+    },
+    "decision_values": [
+      "pass",
+      "fail"
+    ],
+    "pass_definition": "A row passes only if every applicable criterion below passes; mark non-applicable criteria N/A and explain in human_notes.",
+    "required_passes": 51,
+    "threshold": 0.85
+  },
+  "sampling": {
+    "allocation": [
+      {
+        "dimension": "biochemistry_structural",
+        "finalized_cell_bucket": "1",
+        "sample_rows": 4,
+        "source_rows": 19
+      },
+      {
+        "dimension": "biochemistry_structural",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 13,
+        "source_rows": 71
+      },
+      {
+        "dimension": "clinical_epidemiological",
+        "finalized_cell_bucket": "1",
+        "sample_rows": 2,
+        "source_rows": 4
+      },
+      {
+        "dimension": "clinical_epidemiological",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 2,
+        "source_rows": 7
+      },
+      {
+        "dimension": "countermeasure_susceptibility",
+        "finalized_cell_bucket": "1",
+        "sample_rows": 2,
+        "source_rows": 5
+      },
+      {
+        "dimension": "countermeasure_susceptibility",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 3,
+        "source_rows": 14
+      },
+      {
+        "dimension": "diagnostic_detection",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 2,
+        "source_rows": 4
+      },
+      {
+        "dimension": "ecology_niche",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 2,
+        "source_rows": 4
+      },
+      {
+        "dimension": "environmental_stability",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 1,
+        "source_rows": 3
+      },
+      {
+        "dimension": "genome_structure",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 1,
+        "source_rows": 2
+      },
+      {
+        "dimension": "geographic_distribution",
+        "finalized_cell_bucket": "1",
+        "sample_rows": 1,
+        "source_rows": 1
+      },
+      {
+        "dimension": "geographic_distribution",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 1,
+        "source_rows": 1
+      },
+      {
+        "dimension": "immunology_host_response",
+        "finalized_cell_bucket": "1",
+        "sample_rows": 8,
+        "source_rows": 40
+      },
+      {
+        "dimension": "immunology_host_response",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 12,
+        "source_rows": 67
+      },
+      {
+        "dimension": "reservoir_host",
+        "finalized_cell_bucket": "1",
+        "sample_rows": 1,
+        "source_rows": 3
+      },
+      {
+        "dimension": "reservoir_host",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 2,
+        "source_rows": 8
+      },
+      {
+        "dimension": "taxonomy_classification",
+        "finalized_cell_bucket": ">=2",
+        "sample_rows": 3,
+        "source_rows": 14
+      }
+    ],
+    "excluded_source_rows": [
+      {
+        "item_id": "retain-ORG-1087-immunology_host_response",
+        "organism_id": "ORG-1087",
+        "reason": "entity_has_zero_finalized_cells",
+        "record_type": "world_eval",
+        "source_row": 242
+      },
+      {
+        "item_id": "retain-ORG-1454-biochemistry_structural",
+        "organism_id": "ORG-1454",
+        "reason": "entity_has_zero_finalized_cells",
+        "record_type": "world_eval",
+        "source_row": 254
+      },
+      {
+        "item_id": "retain-ORG-1702-immunology_host_response",
+        "organism_id": "ORG-1702",
+        "reason": "entity_has_zero_finalized_cells",
+        "record_type": "world_eval",
+        "source_row": 257
+      },
+      {
+        "item_id": "retain-ORG-1719-immunology_host_response",
+        "organism_id": "ORG-1719",
+        "reason": "entity_has_zero_finalized_cells",
+        "record_type": "world_eval",
+        "source_row": 258
+      }
+    ],
+    "procedure": "Give every nonempty stratum one row; allocate remaining slots by Hamilton largest remainder proportional to residual stratum capacity; rank rows by SHA-256('spec-i-gate0|seed|source_row').",
+    "sample_size": 60,
+    "sampling_frame_rows": 267,
+    "seed": 20260812,
+    "strata": [
+      "dimension",
+      "finalized_cell_bucket (1 vs >=2)"
+    ]
+  },
+  "spec": "Spec I",
+  "state": "awaiting_human_review"
+}

@@ -1,0 +1,190 @@
+{
+  "cells": 6,
+  "controls": {
+    "conflict_vs_sign_shuffle_null": {
+      "checkpoints": 66,
+      "fraction": 0.9696969696969697,
+      "outside_sign_shuffle_band": 64
+    },
+    "projector_positive_control": {
+      "alpha_channel_status": "valid",
+      "failures": [],
+      "pass": true,
+      "per_model": {
+        "e2e-strong-filter": {
+          "0.01": {
+            "alpha_retain_step0": 0.6080700077206967,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.1,
+            "random_null_mean": 0.0999190477720185,
+            "random_null_p97_5": 0.10059032684164401,
+            "ratio_to_null_mean": 6.085626527467586
+          },
+          "0.05": {
+            "alpha_retain_step0": 0.7805335593836278,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.22360679774997896,
+            "random_null_mean": 0.22358313055564033,
+            "random_null_p97_5": 0.22421248702297392,
+            "ratio_to_null_mean": 3.491021694901021
+          },
+          "0.10": {
+            "alpha_retain_step0": 0.8461889933650227,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.31622776601683794,
+            "random_null_mean": 0.3162664347376182,
+            "random_null_p97_5": 0.31696420646926265,
+            "ratio_to_null_mean": 2.675557379546269
+          }
+        },
+        "unfiltered": {
+          "0.01": {
+            "alpha_retain_step0": 0.6075394811314307,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.1,
+            "random_null_mean": 0.09998346216596427,
+            "random_null_p97_5": 0.10187901783072661,
+            "ratio_to_null_mean": 6.0763997162147225
+          },
+          "0.05": {
+            "alpha_retain_step0": 0.7769711862085892,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.22360679774997896,
+            "random_null_mean": 0.2236283785718151,
+            "random_null_p97_5": 0.2249791262328433,
+            "ratio_to_null_mean": 3.474385456669918
+          },
+          "0.10": {
+            "alpha_retain_step0": 0.8430942281094569,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.31622776601683794,
+            "random_null_mean": 0.3162645942134893,
+            "random_null_p97_5": 0.3179237111298154,
+            "ratio_to_null_mean": 2.6657875827236603
+          }
+        },
+        "unfiltered-cb": {
+          "0.01": {
+            "alpha_retain_step0": 0.6889509921022686,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.1,
+            "random_null_mean": 0.09969908215987612,
+            "random_null_p97_5": 0.12471763856886046,
+            "ratio_to_null_mean": 6.9103042593458985
+          },
+          "0.05": {
+            "alpha_retain_step0": 0.8235171165493849,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.22360679774997896,
+            "random_null_mean": 0.22362263537966406,
+            "random_null_p97_5": 0.2402496980948921,
+            "ratio_to_null_mean": 3.682619673769726
+          },
+          "0.10": {
+            "alpha_retain_step0": 0.8791012862063642,
+            "exceeds_null": true,
+            "isotropic_expectation": 0.31622776601683794,
+            "random_null_mean": 0.316134676428071,
+            "random_null_p97_5": 0.3319117431942884,
+            "ratio_to_null_mean": 2.7807809511411916
+          }
+        }
+      },
+      "rule": "alpha_r(0) must substantially exceed the random-mask null for every model at every k; failure stops the alpha channel, conflict proceeds regardless"
+    }
+  },
+  "descriptive_note": "alpha curves, k-sweeps, forget-T conflict curves and the unfiltered rows carry no preregistered direction",
+  "preregistered": {
+    "P1": {
+      "cleared_definition": "certified (Spec R Amendment 3) AND both gradient norms nonzero",
+      "difference": -0.3543578317029351,
+      "direction_satisfied": false,
+      "e2e_strong_filter_runs": [
+        {
+          "certified_through": 512,
+          "condition": "retain-only",
+          "conflict_by_step": {
+            "0": 0.8671977696320965,
+            "1": 0.8671977696320965,
+            "128": 0.4319177380655409,
+            "16": 0.8150765441572186,
+            "2": 0.8673669555403611,
+            "256": 0.00401370756804384,
+            "32": 0.7187813710941673,
+            "4": 0.8664275746695742,
+            "512": -0.021331157541502093,
+            "64": 0.6256191872595692,
+            "8": 0.8589221015274244
+          },
+          "lr": "1e-05",
+          "mean_conflict_early": 0.8108236591890635,
+          "model": "e2e-strong-filter",
+          "n_steps": 8,
+          "run_id": "spec-e__e2e-strong-filter__retain-only__lr-1e-05__seed-0",
+          "seed": 0,
+          "steps_used": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ]
+        }
+      ],
+      "early_window": "cleared steps <= 64",
+      "interval_available": false,
+      "median_mean_conflict_early": {
+        "e2e-strong-filter": 0.8108236591890635,
+        "unfiltered-cb": 0.4564658274861284
+      },
+      "reason": "the preregistered direction fails: the unfiltered-cb arm median is BELOW the e2e-strong-filter arm median, so the conjunction P1 states is false independently of the interval. The run-level interval was in any case unavailable at Tier 1 (n=1 run per arm).",
+      "runs_per_arm": {
+        "e2e-strong-filter": 1,
+        "unfiltered-cb": 1
+      },
+      "statement": "under retain-only, the mean of conflict(t) over cleared steps <= 64 is greater for unfiltered-cb than for e2e-strong-filter, aggregated over (lr, seed) by median, with a run-level bootstrap 95% CI on the difference excluding zero",
+      "unfiltered_cb_runs": [
+        {
+          "certified_through": 512,
+          "condition": "retain-only",
+          "conflict_by_step": {
+            "0": 0.454244543875238,
+            "1": 0.454244543875238,
+            "128": 0.5909105949513722,
+            "16": 0.3746731592490493,
+            "2": 0.3797131405027403,
+            "256": 0.30372838963691556,
+            "32": 0.225977886274746,
+            "4": 0.36982608051810395,
+            "512": 0.011947791683379635,
+            "64": 0.9083106321031071,
+            "8": 0.4847366334908044
+          },
+          "lr": "5e-05",
+          "mean_conflict_early": 0.4564658274861284,
+          "model": "unfiltered-cb",
+          "n_steps": 8,
+          "run_id": "spec-e__unfiltered-cb__retain-only__lr-5e-05__seed-0",
+          "seed": 0,
+          "steps_used": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ]
+        }
+      ],
+      "verdict": "not_satisfied"
+    }
+  },
+  "primary_quantity": "conflict(t) = cos(g_f(t), g_r(t))",
+  "spec": "G",
+  "status": "complete"
+}

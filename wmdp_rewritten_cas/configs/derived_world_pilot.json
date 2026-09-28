@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "experiment_id": "derived-world-mechanism-ceiling-v1",
+  "source_core_csv": "spec04r_integrated_amend03/final_clean_world/core_selection.csv",
+  "output_dir": "derived_world_pilot_outputs",
+  "entity_count": 40,
+  "held_out_count": 10,
+  "seeds": [
+    602,
+    1602,
+    2602
+  ],
+  "premise_count": 4,
+  "trait_cardinality": 4,
+  "value_cardinality": 4,
+  "minimum_cells_per_premise": 5,
+  "minimum_target_cells_per_held_out_entity": 3,
+  "compression_ceiling": 0.3,
+  "predictor": {
+    "kind": "exact_trait_value_majority",
+    "derived_accuracy_floor": 0.95,
+    "maximum_resample_attempts": 5,
+    "uniform_sampling_null": {
+      "draws": 1000,
+      "seed": 20260811
+    },
+    "pooled_acceptance_interval": [
+      0.183,
+      0.325
+    ],
+    "per_seed_lower_tail_p_floor": 0.01
+  },
+  "token_matching": {
+    "counter": "utf8_whitespace_tokens",
+    "relative_tolerance": 0.0,
+    "padding_fallback_enabled": true,
+    "padding_only_above_tolerance": true
+  },
+  "analysis": {
+    "primary_contrast": "derived_minus_derived_independent",
+    "primary_go_no_go_minimum": 0.2,
+    "minimum_detectable_effect": 0.2,
+    "alpha_two_sided": 0.05,
+    "power": 0.8,
+    "cluster_unit": "entity",
+    "chance_baseline_by_dimension": {
+      "outcome_A": 0.25,
+      "outcome_B": 0.25,
+      "outcome_C": 0.25,
+      "outcome_D": 0.25
+    },
+    "training_positive_control_accuracy_floor": 0.5
+  },
+  "training_authorized": false
+}

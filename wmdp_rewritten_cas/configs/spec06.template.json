@@ -1,0 +1,137 @@
+{
+  "base_model": "REQUIRED_MODEL_ID",
+  "base_revision": "REQUIRED_IMMUTABLE_REVISION",
+  "training_mode": "REQUIRED_CHOICE_adapter_OR_full",
+  "seeds": [
+    602,
+    1602,
+    2602
+  ],
+  "learning_rate": 0.00002,
+  "warmup_ratio": 0.03,
+  "scheduler": "cosine",
+  "batch_size": 1,
+  "gradient_accumulation_steps": 16,
+  "sequence_length": 4096,
+  "epochs": 3,
+  "checkpoint_interval": 100,
+  "logging_interval": 1,
+  "general_tolerance": "REQUIRED_NUMERIC_DECISION",
+  "checkpoint_retention": {
+    "policy": "REQUIRED_POLICY",
+    "keep": []
+  },
+  "adapter": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "arm_sources": {
+    "control": {
+      "path_key": "control_naive_corpus",
+      "text_column": "control_text"
+    },
+    "naive": {
+      "path_key": "control_naive_corpus",
+      "text_column": "naive_text"
+    },
+    "world": {
+      "path_key": "world_corpus",
+      "text_column": "world_text"
+    },
+    "factual": {
+      "path_key": "factual_corpus",
+      "text_column": "factual_text"
+    }
+  },
+  "paths": {
+    "world": "REQUIRED_FINAL_WORLD_FILE",
+    "pilot_weval": "REQUIRED_IN_SECTION_WEVAL_DIRECT_RETAIN_JSONL",
+    "world_corpus": "REQUIRED_SPEC05_WORLD_CORPUS_JSONL",
+    "control_naive_corpus": "REQUIRED_JOINED_CONTROL_NAIVE_JSONL",
+    "control_ids": "REQUIRED_CONTROL_IDS_JSONL",
+    "naive_ids": "REQUIRED_NAIVE_IDS_JSONL",
+    "weval": "REQUIRED_WEVAL_JSONL",
+    "cmap": "REQUIRED_CMAP_JSONL",
+    "bench": "REQUIRED_BENCH_JSONL",
+    "general": "REQUIRED_GENERAL_JSONL",
+    "pilot_factual_corpus": "REQUIRED_SPEC05_FACTUAL_ONE_SECTION_PILOT_JSONL",
+    "pilot_world_corpus": "REQUIRED_SPEC05_WORLD_ONE_SECTION_PILOT_JSONL",
+    "factual_corpus": "REQUIRED_SPEC05_FACTUAL_CORPUS_JSONL",
+    "factual_subsets": "REQUIRED_SPEC05_FACTUAL_SUBSETS_JSON",
+    "world_subsets": "REQUIRED_SPEC05_WORLD_SUBSETS_JSON",
+    "control_subsets": "REQUIRED_SPEC05_CONTROL_SUBSETS_JSON",
+    "factual_generation_config": "REQUIRED_SPEC05_FACTUAL_GENERATION_CONFIG_JSON",
+    "world_generation_config": "REQUIRED_SPEC05_WORLD_GENERATION_CONFIG_JSON",
+    "gate_polarity": "REQUIRED_SPEC05_G1_G3_POLARITY_EVIDENCE_JSONL",
+    "factual_spine_manifest": "REQUIRED_CORPUS_F_SPINE_MANIFEST_JSON",
+    "factual_spine_chunks": "REQUIRED_CORPUS_F_SPINE_CHUNKS_JSONL",
+    "factual_derived": "REQUIRED_CORPUS_F_DERIVED_JSONL",
+    "factual_diversity": "REQUIRED_CORPUS_F_DIVERSITY_JSON",
+    "factual_pilot_gate": "REQUIRED_CORPUS_F_PILOT_GATE_JSON",
+    "world_spine_manifest": "REQUIRED_CORPUS_W_SPINE_MANIFEST_JSON",
+    "world_spine_chunks": "REQUIRED_CORPUS_W_SPINE_CHUNKS_JSONL",
+    "world_derived": "REQUIRED_CORPUS_W_DERIVED_JSONL",
+    "world_diversity": "REQUIRED_CORPUS_W_DIVERSITY_JSON",
+    "world_pilot_gate": "REQUIRED_CORPUS_W_PILOT_GATE_JSON",
+    "spec05_pair_validation": "REQUIRED_SPEC05_PAIRED_TWO_PHASE_VALIDATION_JSON"
+  },
+  "comparison_configs": [],
+  "config_digest": "COMPUTED_WHEN_CONFIG_IS_FROZEN",
+  "paired_corpus_tolerances": {
+    "document_count": 0.01,
+    "token_total": 0.02,
+    "doc_type_share": "REQUIRED_STATED_TOLERANCE"
+  },
+  "pilot_arm_sources": {
+    "factual": {
+      "path_key": "pilot_factual_corpus",
+      "text_column": "factual_text"
+    },
+    "world": {
+      "path_key": "pilot_world_corpus",
+      "text_column": "world_text"
+    }
+  },
+  "paired_generation_config_contract": {
+    "identical_fields": [
+      "scaffold_digest",
+      "generator",
+      "document_type_taxonomy",
+      "document_type_allocation",
+      "per_section_budgets",
+      "cross_reference_structure"
+    ],
+    "factual_value_set": "TRUTH",
+    "world_value_set": "WORLD"
+  },
+  "spine_contract": {
+    "cross_reference_resolution_floor": "REQUIRED_EXPLICIT_NUMERIC_DECISION",
+    "continuous_text_required": true,
+    "all_four_gates_before_derived": true,
+    "human_review_before_derived": true,
+    "derived_records_spine_section_ids": true,
+    "chunk_records_chapter_section_character_spans": true,
+    "diversity_scopes": [
+      "SPINE_CHUNKS",
+      "DERIVED_BY_DOC_TYPE",
+      "CROSS_PHASE",
+      "CORPUS_WIDE"
+    ],
+    "template_collapse_scope": "DERIVED",
+    "pilot_vertical_slice_phases": [
+      "SPINE_CHUNKS",
+      "DERIVED"
+    ],
+    "paired_arms_use_independent_pipelines": true
+  }
+}

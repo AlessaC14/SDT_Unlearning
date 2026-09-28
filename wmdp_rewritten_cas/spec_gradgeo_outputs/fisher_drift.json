@@ -1,0 +1,57 @@
+{
+  "checkpoint": {
+    "model": "unfiltered-cb",
+    "modules_merged": 128,
+    "rationale": "the peak step of the best (lr, seed) for unfiltered-cb / retain-only",
+    "run_id": "spec-e__unfiltered-cb__retain-only__lr-5e-05__seed-0",
+    "step": 256
+  },
+  "method": {
+    "estimator": "fisher_core.accumulate_fisher_diagonal, reused verbatim: true Fisher, exact 4-term enumeration, gold label never referenced",
+    "forward_path": "bf16 model, full LM head, letter logits at the ':' position -- matched to the Fisher study so the comparison differs only by the checkpoint",
+    "included_blocks": 302,
+    "included_coordinates": 4531085312,
+    "merge_precision": "delta merged in fp32 before the cast to bf16",
+    "questions": 454
+  },
+  "overlap": {
+    "0.01": {
+      "chance_overlap_fraction": 0.009999999973516279,
+      "intersection": 8100389,
+      "k_target": 45310853,
+      "lift_over_chance": 17.877368425583214,
+      "new_selected": 45310853,
+      "new_threshold": 0.0035567735321819782,
+      "old_selected": 45310858,
+      "old_threshold": 2.3841828806325793e-05,
+      "overlap_fraction": 0.17877368378237288
+    },
+    "0.05": {
+      "chance_overlap_fraction": 0.05000000384013957,
+      "intersection": 72365166,
+      "k_target": 226554266,
+      "lift_over_chance": 6.388329009342453,
+      "new_selected": 226554283,
+      "new_threshold": 0.0012102730106562376,
+      "old_selected": 226554269,
+      "old_threshold": 5.8081000133825e-06,
+      "overlap_fraction": 0.3194164749991977
+    },
+    "0.10": {
+      "chance_overlap_fraction": 0.10000000834237217,
+      "intersection": 192891073,
+      "k_target": 453108531,
+      "lift_over_chance": 4.25706079858832,
+      "new_selected": 453108569,
+      "new_threshold": 0.0006589038530364633,
+      "old_selected": 453108532,
+      "old_threshold": 2.9268146590766264e-06,
+      "overlap_fraction": 0.42570611537281755
+    }
+  },
+  "reading": "a large overlap retires the fixed-at-step-0 caveat on P_r cheaply; a small one scopes every alpha claim to 'step-0 subspace' and must be stated as such",
+  "seconds": 462,
+  "section": "4 scoped optional -- projector drift check",
+  "spec": "G",
+  "status": "complete"
+}

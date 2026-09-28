@@ -1,0 +1,55 @@
+{
+  "recorded_utc": "2026-08-04T22:38:05Z",
+  "status": "committed_before_full_run",
+  "predictions": [
+    {
+      "id": "P1",
+      "statement": "world delta direct exceeds naive at matched document counts"
+    },
+    {
+      "id": "P2",
+      "statement": "delta P(real) and delta P(counterfactual) move independently"
+    },
+    {
+      "id": "P3",
+      "statement": "naive delta BENCH is greater than or equal to zero"
+    },
+    {
+      "id": "P4",
+      "statement": "control delta BENCH is greater than or equal to zero"
+    },
+    {
+      "id": "P5",
+      "statement": "world delta BENCH is greater on contradicted than uncontradicted items"
+    },
+    {
+      "id": "P6",
+      "statement": "delta implication is smaller than delta direct but non-zero"
+    },
+    {
+      "id": "P7",
+      "statement": "factual raises BENCH, especially on contradicted items; failure makes world uninterpretable"
+    },
+    {
+      "id": "P8",
+      "statement": "factual raises P(real) on WEVAL direct while P(counterfactual) is unchanged"
+    },
+    {
+      "id": "P9",
+      "statement": "factual and world have comparable delta GENERAL; a difference is reported as degradation, not overwriting"
+    }
+  ],
+  "apparatus_gate": {
+    "evaluate_first": "P7",
+    "world_on_failure": "uninterpretable"
+  },
+  "run_plan": {
+    "base_evaluations": 1,
+    "control_training_runs": 2,
+    "naive_training_runs": 2,
+    "factual_training_runs": 5,
+    "world_training_runs": 5,
+    "trained_runs_total": 14,
+    "evaluated_conditions_including_base": 15
+  }
+}

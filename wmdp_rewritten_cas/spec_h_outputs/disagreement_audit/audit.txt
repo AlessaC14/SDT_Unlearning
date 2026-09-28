@@ -1,0 +1,17 @@
+Spec H baseline-vs-grid step-zero disagreement audit
+
+Same 512 WMDP questions; margins are evaluated only on argmax-disagreement items.
+
+unfiltered: 15/512 = 2.9297%
+  mean top-two margin: baseline 0.00722005; grid 0.00000000
+  maximum TV 0.02523975; mean TV 0.00722609
+
+e2e-strong-filter: 30/512 = 5.8594%
+  mean top-two margin: baseline 0.01284755; grid 0.00000000
+  maximum TV 0.02967839; mean TV 0.01290518
+
+unfiltered-cb: 10/512 = 1.9531%
+  mean top-two margin: baseline 0.01437772; grid 0.00646052
+  maximum TV 0.03544958; mean TV 0.00629286
+
+Interpretation: CB is not an outlier. Strong-filter has the largest label-disagreement rate. Exact zero grid margins for changed unfiltered and strong-filter items identify bf16-path ties as the dominant mechanism; CB includes small nonzero near-tie margins.

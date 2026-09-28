@@ -1,0 +1,26 @@
+{
+  "spec": "H",
+  "status": "preflight_until_spec_e_predictions_exist",
+  "inputs": {
+    "relearning_predictions": "spec_e_outputs/predictions/relearning",
+    "pre_attack_predictions": "spec_e_outputs/predictions/pre_attack",
+    "shortcut_predictions": "spec_e_outputs/predictions/shortcut"
+  },
+  "protocol_amendment": "2026-08-12-three-tier-native-four-way",
+  "tier_1": "I(F;Y), native four-way, plugin and Miller-Madow",
+  "tier_2": "diagnostic information associated with the binary pattern of reference correctness; mu and ratio are not reportable",
+  "tier_3": "I(F;Y|L), all native four-way; indicative",
+  "bootstrap_resamples": 1000,
+  "bootstrap_seed": 0,
+  "confidence_interval": "percentile_95",
+  "null_draws": 20,
+  "null_seed": 0,
+  "null_channel": "four_way_symmetric_empirical_gold_prior",
+  "null_mi_tolerance_bits": 0.0005,
+  "negative_mu_policy": "report_unclipped",
+  "degenerate_ratio_policy": "undefined_null",
+  "question_alignment": "exact_ordered_ids_and_gold",
+  "forget_T_regimes": ["tier_1_only"],
+  "retain_only_regimes": ["tier_1", "tier_2", "tier_3"],
+  "tier_2_null_limitation": "scalar symmetric correctness null has expected I(L_correct;Y)=0; report achieved mismatch, do not add unspecified class-conditional parameters"
+}

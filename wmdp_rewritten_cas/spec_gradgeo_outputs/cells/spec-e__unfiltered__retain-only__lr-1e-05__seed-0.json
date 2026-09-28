@@ -1,0 +1,1756 @@
+{
+  "cell": {
+    "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+    "adapter_source": "original_run",
+    "certified_through": 512,
+    "certified_through_original": null,
+    "condition": "retain-only",
+    "lr": "1e-05",
+    "model": "unfiltered",
+    "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+    "seed": 0,
+    "steps": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "view": "full_512"
+  },
+  "records": [
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 3.1168477908627423e-06,
+        "conflict": 1.0674888960005013e-05,
+        "grad_norm_forget": 8.427476622063779e-05,
+        "grad_norm_retain": 5.543492083592838e-05,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5738257478860499,
+            "alpha_retain": 0.6075394811314307,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09979986819214785,
+              "alpha_forget_p2_5": 0.09948908613957003,
+              "alpha_forget_p97_5": 0.10083807318062982,
+              "alpha_retain_mean": 0.09998346216596427,
+              "alpha_retain_p2_5": 0.09957084463968185,
+              "alpha_retain_p97_5": 0.10187901783072661,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7489474425485377,
+            "alpha_retain": 0.7769711862085892,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22380771830945925,
+              "alpha_forget_p2_5": 0.22285041002802983,
+              "alpha_forget_p97_5": 0.22748708660889747,
+              "alpha_retain_mean": 0.2236283785718151,
+              "alpha_retain_p2_5": 0.22301674396191476,
+              "alpha_retain_p97_5": 0.2249791262328433,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8224421043211569,
+            "alpha_retain": 0.8430942281094569,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3164918331213771,
+              "alpha_forget_p2_5": 0.31532969518749226,
+              "alpha_forget_p97_5": 0.31925731540876645,
+              "alpha_retain_mean": 0.3162645942134893,
+              "alpha_retain_p2_5": 0.31550600272997065,
+              "alpha_retain_p97_5": 0.3179237111298154,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.7863813116147444,
+        "conflict_included_blocks": 0.6494637438790289,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.019111636382807762,
+          "p2_5": -0.09479246086832331,
+          "p97_5": 0.10961635556545751
+        },
+        "grad_norm_forget": 5.416998056956291,
+        "grad_norm_forget_included": 2.649342603709187,
+        "grad_norm_retain": 7.979107285691206,
+        "grad_norm_retain_included": 3.8459203038458916
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5738232329661608,
+            "alpha_retain": 0.6075428393121317,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09982086648287808,
+              "alpha_forget_p2_5": 0.0994892186265009,
+              "alpha_forget_p97_5": 0.10066553612768317,
+              "alpha_retain_mean": 0.10006728196322705,
+              "alpha_retain_p2_5": 0.09957774578788159,
+              "alpha_retain_p97_5": 0.10267059685163675,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7489459009583062,
+            "alpha_retain": 0.77697430305638,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22371302507378382,
+              "alpha_forget_p2_5": 0.22291384869284644,
+              "alpha_forget_p97_5": 0.22587732836844346,
+              "alpha_retain_mean": 0.22376078253020165,
+              "alpha_retain_p2_5": 0.22302555659520243,
+              "alpha_retain_p97_5": 0.22537600108713457,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8224413704272845,
+            "alpha_retain": 0.8430963383260859,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3161906719745242,
+              "alpha_forget_p2_5": 0.3154087992953006,
+              "alpha_forget_p97_5": 0.3186427734325132,
+              "alpha_retain_mean": 0.3162197222713315,
+              "alpha_retain_p2_5": 0.31548441769847574,
+              "alpha_retain_p97_5": 0.31718928540303354,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.7863706367257844,
+        "conflict_included_blocks": 0.6494528132296313,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": 0.009198781181739089,
+          "p2_5": -0.08378589818004666,
+          "p97_5": 0.09463028372151513
+        },
+        "grad_norm_forget": 5.417082331722511,
+        "grad_norm_forget_included": 2.649407705376478,
+        "grad_norm_retain": 7.97905185077037,
+        "grad_norm_retain_included": 3.8459057221536646
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 167.1,
+      "seed": 0,
+      "step": 0
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 3.1168477908627423e-06,
+        "conflict": 1.0664085958511649e-05,
+        "grad_norm_forget": 8.34035487793372e-05,
+        "grad_norm_retain": 5.543492083592838e-05,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5738257478860499,
+            "alpha_retain": 0.6075394811314307,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09979986819214785,
+              "alpha_forget_p2_5": 0.09948908613957003,
+              "alpha_forget_p97_5": 0.10083807318062982,
+              "alpha_retain_mean": 0.09998346216596427,
+              "alpha_retain_p2_5": 0.09957084463968185,
+              "alpha_retain_p97_5": 0.10187901783072661,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7489474425485377,
+            "alpha_retain": 0.7769711862085892,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22380771830945925,
+              "alpha_forget_p2_5": 0.22285041002802983,
+              "alpha_forget_p97_5": 0.22748708660889747,
+              "alpha_retain_mean": 0.2236283785718151,
+              "alpha_retain_p2_5": 0.22301674396191476,
+              "alpha_retain_p97_5": 0.2249791262328433,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8224421043211569,
+            "alpha_retain": 0.8430942281094569,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3164918331213771,
+              "alpha_forget_p2_5": 0.31532969518749226,
+              "alpha_forget_p97_5": 0.31925731540876645,
+              "alpha_retain_mean": 0.3162645942134893,
+              "alpha_retain_p2_5": 0.31550600272997065,
+              "alpha_retain_p97_5": 0.3179237111298154,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.7863813116147444,
+        "conflict_included_blocks": 0.6494637438790289,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.019111636382807762,
+          "p2_5": -0.09479246086832331,
+          "p97_5": 0.10961635556545751
+        },
+        "grad_norm_forget": 5.416998056956291,
+        "grad_norm_forget_included": 2.649342603709187,
+        "grad_norm_retain": 7.979107285691206,
+        "grad_norm_retain_included": 3.8459203038458916
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5738235063793137,
+            "alpha_retain": 0.6075428393121317,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09982089267151939,
+              "alpha_forget_p2_5": 0.0994892178799568,
+              "alpha_forget_p97_5": 0.10066588871634138,
+              "alpha_retain_mean": 0.10006728196322705,
+              "alpha_retain_p2_5": 0.09957774578788159,
+              "alpha_retain_p97_5": 0.10267059685163675,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7489460840245888,
+            "alpha_retain": 0.77697430305638,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22371305994323146,
+              "alpha_forget_p2_5": 0.22291377623324352,
+              "alpha_forget_p97_5": 0.22587749187220604,
+              "alpha_retain_mean": 0.22376078253020165,
+              "alpha_retain_p2_5": 0.22302555659520243,
+              "alpha_retain_p97_5": 0.22537600108713457,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8224414954843965,
+            "alpha_retain": 0.8430963383260859,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3161906842369076,
+              "alpha_forget_p2_5": 0.31540875103568744,
+              "alpha_forget_p97_5": 0.31864312309182746,
+              "alpha_retain_mean": 0.3162197222713315,
+              "alpha_retain_p2_5": 0.31548441769847574,
+              "alpha_retain_p97_5": 0.31718928540303354,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.7863706475287859,
+        "conflict_included_blocks": 0.6494530309058838,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": 0.009198775528291103,
+          "p2_5": -0.08378587925772872,
+          "p97_5": 0.09463028437079041
+        },
+        "grad_norm_forget": 5.41708146050507,
+        "grad_norm_forget_included": 2.649407756259836,
+        "grad_norm_retain": 7.97905185077037,
+        "grad_norm_retain_included": 3.8459057221536646
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 168.4,
+      "seed": 0,
+      "step": 1
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 2.8078081926175e-07,
+        "conflict": 2.9635412508444148e-06,
+        "grad_norm_forget": 5.3279321906352095e-05,
+        "grad_norm_retain": 3.252466058789594e-05,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5742068622335676,
+            "alpha_retain": 0.6073782099336115,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09979519426868179,
+              "alpha_forget_p2_5": 0.09948314339222473,
+              "alpha_forget_p97_5": 0.10084026523373278,
+              "alpha_retain_mean": 0.0999801839308234,
+              "alpha_retain_p2_5": 0.0995738320093822,
+              "alpha_retain_p97_5": 0.10183404315062365,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7492411084013936,
+            "alpha_retain": 0.7768473497258913,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22381721046083106,
+              "alpha_forget_p2_5": 0.22283894551237687,
+              "alpha_forget_p97_5": 0.22765065210554178,
+              "alpha_retain_mean": 0.2236282775842336,
+              "alpha_retain_p2_5": 0.22302503230980272,
+              "alpha_retain_p97_5": 0.224958994982532,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8226665739710745,
+            "alpha_retain": 0.8430139563110249,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3165042556406312,
+              "alpha_forget_p2_5": 0.3153157426939345,
+              "alpha_forget_p97_5": 0.31936047994291594,
+              "alpha_retain_mean": 0.3162640153573716,
+              "alpha_retain_p2_5": 0.3155122967939083,
+              "alpha_retain_p97_5": 0.31789501898563205,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.7887062357470417,
+        "conflict_included_blocks": 0.6519310892756469,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.01910371423679486,
+          "p2_5": -0.09457658882335039,
+          "p97_5": 0.10964294876479103
+        },
+        "grad_norm_forget": 5.435950575183614,
+        "grad_norm_forget_included": 2.6605682103292296,
+        "grad_norm_retain": 7.992854062380704,
+        "grad_norm_retain_included": 3.851762915563859
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.574204749410949,
+            "alpha_retain": 0.6073790386332106,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09981778943995238,
+              "alpha_forget_p2_5": 0.09948299078189626,
+              "alpha_forget_p97_5": 0.10067909583880971,
+              "alpha_retain_mean": 0.10007060428382933,
+              "alpha_retain_p2_5": 0.09958086836124234,
+              "alpha_retain_p97_5": 0.10267666541732594,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7492395966333262,
+            "alpha_retain": 0.7768476305067106,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22371463498628205,
+              "alpha_forget_p2_5": 0.2229000396679751,
+              "alpha_forget_p97_5": 0.22595849608939475,
+              "alpha_retain_mean": 0.2237644048473219,
+              "alpha_retain_p2_5": 0.2230319309845434,
+              "alpha_retain_p97_5": 0.2253926292421865,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8226656176540497,
+            "alpha_retain": 0.8430139927952816,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3161922500332883,
+              "alpha_forget_p2_5": 0.315394111444144,
+              "alpha_forget_p97_5": 0.31875812799835396,
+              "alpha_retain_mean": 0.3162232369483936,
+              "alpha_retain_p2_5": 0.31549134668107365,
+              "alpha_retain_p97_5": 0.3171928105544562,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.7887032722057908,
+        "conflict_included_blocks": 0.6519302804985603,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": 0.009214962572903572,
+          "p2_5": -0.08409120844549886,
+          "p97_5": 0.09495390882685809
+        },
+        "grad_norm_forget": 5.43600385450552,
+        "grad_norm_forget_included": 2.6606035580409992,
+        "grad_norm_retain": 7.9928865870412915,
+        "grad_norm_retain_included": 3.8517547627055935
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 182.8,
+      "seed": 0,
+      "step": 2
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 2.340907344633436e-06,
+        "conflict": 5.402257648223774e-06,
+        "grad_norm_forget": 4.996776412902193e-05,
+        "grad_norm_retain": 5.71625800738218e-06,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5723550398927875,
+            "alpha_retain": 0.6067638838244717,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09980217286806656,
+              "alpha_forget_p2_5": 0.09949002375338585,
+              "alpha_forget_p97_5": 0.10082738890338147,
+              "alpha_retain_mean": 0.09998650232907373,
+              "alpha_retain_p2_5": 0.0995732248189562,
+              "alpha_retain_p97_5": 0.10188021515683401,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7477713713645578,
+            "alpha_retain": 0.776389410731034,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22380413492980294,
+              "alpha_forget_p2_5": 0.22285219939227427,
+              "alpha_forget_p97_5": 0.22748015663544743,
+              "alpha_retain_mean": 0.22363096411701172,
+              "alpha_retain_p2_5": 0.223021516088983,
+              "alpha_retain_p97_5": 0.22497743639910212,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8215819217587687,
+            "alpha_retain": 0.8426951133539167,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.316491207552358,
+              "alpha_forget_p2_5": 0.3153320386776124,
+              "alpha_forget_p97_5": 0.3192766096249946,
+              "alpha_retain_mean": 0.31626488320229057,
+              "alpha_retain_p2_5": 0.31551204644911773,
+              "alpha_retain_p97_5": 0.3179102025388563,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.7788887682597201,
+        "conflict_included_blocks": 0.6399279685798236,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.01896162757194899,
+          "p2_5": -0.0946052245839321,
+          "p97_5": 0.10929445678755566
+        },
+        "grad_norm_forget": 5.326494381140415,
+        "grad_norm_forget_included": 2.6115945384546033,
+        "grad_norm_retain": 7.8437414892510615,
+        "grad_norm_retain_included": 3.790378124891613
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5723551418556664,
+            "alpha_retain": 0.6067668896716627,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09981208933117566,
+              "alpha_forget_p2_5": 0.09949546946978527,
+              "alpha_forget_p97_5": 0.10058141617829122,
+              "alpha_retain_mean": 0.10006320789227163,
+              "alpha_retain_p2_5": 0.09958265093220736,
+              "alpha_retain_p97_5": 0.10262504154587883,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7477717182256474,
+            "alpha_retain": 0.7763917516383786,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22370406307132273,
+              "alpha_forget_p2_5": 0.22291915162769937,
+              "alpha_forget_p97_5": 0.22589246367985427,
+              "alpha_retain_mean": 0.22375428082034182,
+              "alpha_retain_p2_5": 0.22303270792945398,
+              "alpha_retain_p97_5": 0.2253373408954341,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.821581832413764,
+            "alpha_retain": 0.8426965772828919,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3161899508758669,
+              "alpha_forget_p2_5": 0.31541931170050874,
+              "alpha_forget_p97_5": 0.318633121544301,
+              "alpha_retain_mean": 0.31621762614672055,
+              "alpha_retain_p2_5": 0.3154902108156883,
+              "alpha_retain_p97_5": 0.31718141517890197,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.7788833660020719,
+        "conflict_included_blocks": 0.6399154016460028,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": 0.009107484164685993,
+          "p2_5": -0.08288763555429686,
+          "p97_5": 0.09319250514541609
+        },
+        "grad_norm_forget": 5.326444413376286,
+        "grad_norm_forget_included": 2.611574606014161,
+        "grad_norm_retain": 7.843747205509069,
+        "grad_norm_retain_included": 3.7904137977967163
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 148.0,
+      "seed": 0,
+      "step": 4
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 4.488821282011557e-06,
+        "conflict": 2.889594418631347e-06,
+        "grad_norm_forget": 5.51131713182329e-05,
+        "grad_norm_retain": 0.00017702305599520685,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5643400842020255,
+            "alpha_retain": 0.602579885022535,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09981122899435815,
+              "alpha_forget_p2_5": 0.09949394183626607,
+              "alpha_forget_p97_5": 0.10073176363666499,
+              "alpha_retain_mean": 0.10000982063219566,
+              "alpha_retain_p2_5": 0.09957707329593753,
+              "alpha_retain_p97_5": 0.10203737643410439,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7412382488607067,
+            "alpha_retain": 0.7732453629135949,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.2237799243986754,
+              "alpha_forget_p2_5": 0.22285380503584598,
+              "alpha_forget_p97_5": 0.22712792921814584,
+              "alpha_retain_mean": 0.22363625682271362,
+              "alpha_retain_p2_5": 0.22302092930843698,
+              "alpha_retain_p97_5": 0.2249752339553144,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8167334981222867,
+            "alpha_retain": 0.840511078995638,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3164660737409043,
+              "alpha_forget_p2_5": 0.3153515772072078,
+              "alpha_forget_p97_5": 0.3191571126300559,
+              "alpha_retain_mean": 0.3162751828851908,
+              "alpha_retain_p2_5": 0.31552016795794163,
+              "alpha_retain_p97_5": 0.3180040912727329,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.7280685955932156,
+        "conflict_included_blocks": 0.579558788503656,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.01818292308225623,
+          "p2_5": -0.09580769133923955,
+          "p97_5": 0.10793650148904224
+        },
+        "grad_norm_forget": 4.936568058677403,
+        "grad_norm_forget_included": 2.443225111373755,
+        "grad_norm_retain": 7.239906630165644,
+        "grad_norm_retain_included": 3.540011017185243
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5643377736724735,
+            "alpha_retain": 0.6025755863459891,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09979377795975915,
+              "alpha_forget_p2_5": 0.09953712245836373,
+              "alpha_forget_p97_5": 0.10037150758463091,
+              "alpha_retain_mean": 0.1000371202824664,
+              "alpha_retain_p2_5": 0.09959131025918763,
+              "alpha_retain_p97_5": 0.10236896160282888,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7412361900587856,
+            "alpha_retain": 0.7732408740923129,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22368068473219185,
+              "alpha_forget_p2_5": 0.22296425320749214,
+              "alpha_forget_p97_5": 0.22580435837344812,
+              "alpha_retain_mean": 0.22372032059170524,
+              "alpha_retain_p2_5": 0.2230431094451786,
+              "alpha_retain_p97_5": 0.2252459037634972,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8167317118048113,
+            "alpha_retain": 0.8405072838147168,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3161879784180959,
+              "alpha_forget_p2_5": 0.31547845796115703,
+              "alpha_forget_p97_5": 0.3183657047494568,
+              "alpha_retain_mean": 0.3162040435068138,
+              "alpha_retain_p2_5": 0.31548826036306393,
+              "alpha_retain_p97_5": 0.3171401709587793,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.7280657059987969,
+        "conflict_included_blocks": 0.5795503003409127,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": 0.00847865485018169,
+          "p2_5": -0.07606336536062061,
+          "p97_5": 0.08272084917694614
+        },
+        "grad_norm_forget": 4.9365129455060845,
+        "grad_norm_forget_included": 2.443177481365864,
+        "grad_norm_retain": 7.239729607109648,
+        "grad_norm_retain_included": 3.539825095892271
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 152.0,
+      "seed": 0,
+      "step": 8
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 5.246100180711366e-06,
+        "conflict": 6.024225866929633e-06,
+        "grad_norm_forget": 4.9870862419254536e-05,
+        "grad_norm_retain": 0.00012021564141662111,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5419014998971743,
+            "alpha_retain": 0.5812697474542668,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09984432894384448,
+              "alpha_forget_p2_5": 0.09955999995185645,
+              "alpha_forget_p97_5": 0.10037371821263313,
+              "alpha_retain_mean": 0.10007624516721889,
+              "alpha_retain_p2_5": 0.09958678761586667,
+              "alpha_retain_p97_5": 0.10261206347660512,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7218073818075025,
+            "alpha_retain": 0.757041273412624,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22367604098333754,
+              "alpha_forget_p2_5": 0.2229730164900164,
+              "alpha_forget_p97_5": 0.22602876717290896,
+              "alpha_retain_mean": 0.22366110075785,
+              "alpha_retain_p2_5": 0.22294086384116749,
+              "alpha_retain_p97_5": 0.22545028695070515,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8019992789683972,
+            "alpha_retain": 0.8295383174500877,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.31634367953623177,
+              "alpha_forget_p2_5": 0.31549242210650874,
+              "alpha_forget_p97_5": 0.3183426884950682,
+              "alpha_retain_mean": 0.3163181272642001,
+              "alpha_retain_p2_5": 0.3154915706287867,
+              "alpha_retain_p97_5": 0.31831523096746533,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.5021123055949105,
+        "conflict_included_blocks": 0.338197983724799,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.012770431637318894,
+          "p2_5": -0.09071132172469393,
+          "p97_5": 0.09323182913476072
+        },
+        "grad_norm_forget": 4.3390217597633685,
+        "grad_norm_forget_included": 2.2063645352691257,
+        "grad_norm_retain": 5.65808943194592,
+        "grad_norm_retain_included": 2.9588649892996224
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5418998038494477,
+            "alpha_retain": 0.581264393738529,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09982416607154107,
+              "alpha_forget_p2_5": 0.09968310239045025,
+              "alpha_forget_p97_5": 0.10015198026751876,
+              "alpha_retain_mean": 0.09995913097506257,
+              "alpha_retain_p2_5": 0.09960578383017518,
+              "alpha_retain_p97_5": 0.10165161653803093,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7218061216542069,
+            "alpha_retain": 0.7570360273124432,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22367296955661953,
+              "alpha_forget_p2_5": 0.22313186860517847,
+              "alpha_forget_p97_5": 0.2252213600477471,
+              "alpha_retain_mean": 0.22363334729744205,
+              "alpha_retain_p2_5": 0.22306680887236283,
+              "alpha_retain_p97_5": 0.22514102166523933,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.801998248249289,
+            "alpha_retain": 0.8295341914452621,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3161988079388733,
+              "alpha_forget_p2_5": 0.3155809397199303,
+              "alpha_forget_p97_5": 0.3176113434461993,
+              "alpha_retain_mean": 0.3161628429558254,
+              "alpha_retain_p2_5": 0.31546058344653544,
+              "alpha_retain_p97_5": 0.3173815552887841,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.5021062813690436,
+        "conflict_included_blocks": 0.33818298724779433,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": 0.00444271189221856,
+          "p2_5": -0.04538853036417727,
+          "p97_5": 0.05087027568192372
+        },
+        "grad_norm_forget": 4.339071630625788,
+        "grad_norm_forget_included": 2.2063844739408145,
+        "grad_norm_retain": 5.657969216304504,
+        "grad_norm_retain_included": 2.9587499617181376
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 151.4,
+      "seed": 0,
+      "step": 16
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 1.1008593037153958e-07,
+        "conflict": 2.6154927983745857e-05,
+        "grad_norm_forget": 3.8833015585382213e-05,
+        "grad_norm_retain": 4.610946505678726e-05,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5569748177702218,
+            "alpha_retain": 0.6073576646867205,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.0997795799945396,
+              "alpha_forget_p2_5": 0.09944774415763173,
+              "alpha_forget_p97_5": 0.10137500221754979,
+              "alpha_retain_mean": 0.10001435342660962,
+              "alpha_retain_p2_5": 0.09971194094214945,
+              "alpha_retain_p97_5": 0.10122857091427676,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7371290494474805,
+            "alpha_retain": 0.7808446726223383,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22390131321036955,
+              "alpha_forget_p2_5": 0.2225974618183282,
+              "alpha_forget_p97_5": 0.22871116374838799,
+              "alpha_retain_mean": 0.22365519082037272,
+              "alpha_retain_p2_5": 0.22321242807383196,
+              "alpha_retain_p97_5": 0.22443592035294982,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8154752345424691,
+            "alpha_retain": 0.8479926790703824,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.31651175775557394,
+              "alpha_forget_p2_5": 0.31505649795885843,
+              "alpha_forget_p97_5": 0.32047671888065726,
+              "alpha_retain_mean": 0.3162357195079085,
+              "alpha_retain_p2_5": 0.3157019152561843,
+              "alpha_retain_p97_5": 0.3171343581960911,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.6335655804385918,
+        "conflict_included_blocks": 0.49338067262239393,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.011617898774441535,
+          "p2_5": -0.06024980354539954,
+          "p97_5": 0.05119616735913281
+        },
+        "grad_norm_forget": 4.320360482058673,
+        "grad_norm_forget_included": 2.7200474005562887,
+        "grad_norm_retain": 7.652475366666567,
+        "grad_norm_retain_included": 4.092161610279993
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5569717476179578,
+            "alpha_retain": 0.6073581281150823,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09986267723173786,
+              "alpha_forget_p2_5": 0.09937255092566978,
+              "alpha_forget_p97_5": 0.10195410175564261,
+              "alpha_retain_mean": 0.09997934692835274,
+              "alpha_retain_p2_5": 0.09967815869365317,
+              "alpha_retain_p97_5": 0.10096492905092805,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7371285162454672,
+            "alpha_retain": 0.7808447827082686,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.2238155509494669,
+              "alpha_forget_p2_5": 0.22277560578568065,
+              "alpha_forget_p97_5": 0.22712064164812332,
+              "alpha_retain_mean": 0.2236634629594445,
+              "alpha_retain_p2_5": 0.2232693619322851,
+              "alpha_retain_p97_5": 0.22431495014826827,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8154755551827604,
+            "alpha_retain": 0.8479928688664791,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3162980739266936,
+              "alpha_forget_p2_5": 0.31510526296433966,
+              "alpha_forget_p97_5": 0.3195511053846931,
+              "alpha_retain_mean": 0.3161829072735462,
+              "alpha_retain_p2_5": 0.31571895944467965,
+              "alpha_retain_p97_5": 0.3167472567035787,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.6335917353665755,
+        "conflict_included_blocks": 0.4934163015300205,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": 0.004179091434352411,
+          "p2_5": -0.05974978444591698,
+          "p97_5": 0.0686813609753833
+        },
+        "grad_norm_forget": 4.320321649043088,
+        "grad_norm_forget_included": 2.7200202856115108,
+        "grad_norm_retain": 7.652521476131624,
+        "grad_norm_retain_included": 4.092200367971574
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 147.7,
+      "seed": 0,
+      "step": 32
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 3.5480165470058722e-06,
+        "conflict": 3.959473237613587e-06,
+        "grad_norm_forget": 5.4673199979760057e-05,
+        "grad_norm_retain": 0.00014283912494139628,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5619254480171691,
+            "alpha_retain": 0.6066155079861838,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.0999089054445108,
+              "alpha_forget_p2_5": 0.09972775474700826,
+              "alpha_forget_p97_5": 0.10031197301865753,
+              "alpha_retain_mean": 0.10008844523732334,
+              "alpha_retain_p2_5": 0.09940971650999739,
+              "alpha_retain_p97_5": 0.1023395802822824,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7357630052289353,
+            "alpha_retain": 0.7784602821043787,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22358201236603642,
+              "alpha_forget_p2_5": 0.22321030757309554,
+              "alpha_forget_p97_5": 0.22420507342630847,
+              "alpha_retain_mean": 0.22378650716009268,
+              "alpha_retain_p2_5": 0.22284048295769807,
+              "alpha_retain_p97_5": 0.22560102481656238,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8107578643298501,
+            "alpha_retain": 0.8447248485895948,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.31620755863488875,
+              "alpha_forget_p2_5": 0.31576487708422685,
+              "alpha_forget_p97_5": 0.3168803158261689,
+              "alpha_retain_mean": 0.3162645917596906,
+              "alpha_retain_p2_5": 0.3154524482023558,
+              "alpha_retain_p97_5": 0.31762254356410136,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.2654595355537172,
+        "conflict_included_blocks": 0.1783058846260493,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": 0.0052233378437399934,
+          "p2_5": -0.05782191085414681,
+          "p97_5": 0.06354882813723234
+        },
+        "grad_norm_forget": 5.085391250078195,
+        "grad_norm_forget_included": 2.429543206742899,
+        "grad_norm_retain": 6.0186430153041055,
+        "grad_norm_retain_included": 3.477423302493211
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5619275109590569,
+            "alpha_retain": 0.6066194914849399,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09993527733365769,
+              "alpha_forget_p2_5": 0.09969874628699033,
+              "alpha_forget_p97_5": 0.10019729786221444,
+              "alpha_retain_mean": 0.09974934250934561,
+              "alpha_retain_p2_5": 0.09947534358967544,
+              "alpha_retain_p97_5": 0.1006025535358205,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7357635448711531,
+            "alpha_retain": 0.7784638301209257,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22364677607498815,
+              "alpha_forget_p2_5": 0.22327835762924908,
+              "alpha_forget_p97_5": 0.22424549696714238,
+              "alpha_retain_mean": 0.22344598000693838,
+              "alpha_retain_p2_5": 0.22289633831215175,
+              "alpha_retain_p97_5": 0.2246296951538335,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8107580318659656,
+            "alpha_retain": 0.8447275887009921,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3162167112298567,
+              "alpha_forget_p2_5": 0.31581051653845327,
+              "alpha_forget_p97_5": 0.3165882692761436,
+              "alpha_retain_mean": 0.3161574581760485,
+              "alpha_retain_p2_5": 0.31523049225902716,
+              "alpha_retain_p97_5": 0.31727606472526054,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.2654555760804796,
+        "conflict_included_blocks": 0.17831076965545076,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.0018558694545033865,
+          "p2_5": -0.058327949183501815,
+          "p97_5": 0.056102238397464504
+        },
+        "grad_norm_forget": 5.085445923278175,
+        "grad_norm_forget_included": 2.4295813386996055,
+        "grad_norm_retain": 6.018785854429047,
+        "grad_norm_retain_included": 3.477546437583864
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 148.2,
+      "seed": 0,
+      "step": 64
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 6.265093570934077e-06,
+        "conflict": 1.0867814420667532e-05,
+        "grad_norm_forget": 2.0133473874750507e-06,
+        "grad_norm_retain": 0.0001433441976281813,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5977236671327113,
+            "alpha_retain": 0.5351508932118976,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09998884622064652,
+              "alpha_forget_p2_5": 0.09972704956788768,
+              "alpha_forget_p97_5": 0.10074634883321652,
+              "alpha_retain_mean": 0.10006834138051968,
+              "alpha_retain_p2_5": 0.09975378715028961,
+              "alpha_retain_p97_5": 0.10171080715214807,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7714872954725785,
+            "alpha_retain": 0.7219279287887326,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.2235943607299078,
+              "alpha_forget_p2_5": 0.22320685395879222,
+              "alpha_forget_p97_5": 0.22449922936198385,
+              "alpha_retain_mean": 0.2236432736095862,
+              "alpha_retain_p2_5": 0.22325020114102598,
+              "alpha_retain_p97_5": 0.22485859817687098,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8388777091448688,
+            "alpha_retain": 0.8058308557383148,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3160794617170297,
+              "alpha_forget_p2_5": 0.3156887298331302,
+              "alpha_forget_p97_5": 0.3168007985232175,
+              "alpha_retain_mean": 0.31627939577968495,
+              "alpha_retain_p2_5": 0.3158199620037345,
+              "alpha_retain_p97_5": 0.31717090549165483,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.4899071253469342,
+        "conflict_included_blocks": 0.34153699689103995,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.0027700183884427536,
+          "p2_5": -0.050865951617187356,
+          "p97_5": 0.05195676219398303
+        },
+        "grad_norm_forget": 14.892910139457518,
+        "grad_norm_forget_included": 9.576857225598339,
+        "grad_norm_retain": 5.3222636703510995,
+        "grad_norm_retain_included": 3.2941158369079404
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5977242549376339,
+            "alpha_retain": 0.5351564414899641,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09991303540154127,
+              "alpha_forget_p2_5": 0.09965836300871787,
+              "alpha_forget_p97_5": 0.10024713250744509,
+              "alpha_retain_mean": 0.0999189575219719,
+              "alpha_retain_p2_5": 0.0997231897841815,
+              "alpha_retain_p97_5": 0.1000504070876493,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7714875103508938,
+            "alpha_retain": 0.7219341938823035,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22359299226763732,
+              "alpha_forget_p2_5": 0.22307080250495123,
+              "alpha_forget_p97_5": 0.224157920222613,
+              "alpha_retain_mean": 0.22370871984090882,
+              "alpha_retain_p2_5": 0.22331062719223607,
+              "alpha_retain_p97_5": 0.22455455110310568,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8388778873422299,
+            "alpha_retain": 0.8058359055477495,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3161630654677096,
+              "alpha_forget_p2_5": 0.31561823672838824,
+              "alpha_forget_p97_5": 0.3166903763329406,
+              "alpha_retain_mean": 0.3162411440393287,
+              "alpha_retain_p2_5": 0.3157707911374136,
+              "alpha_retain_p97_5": 0.3170215648826521,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.48989625753251353,
+        "conflict_included_blocks": 0.3415205017647299,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.00368295715182066,
+          "p2_5": -0.06233555398141962,
+          "p97_5": 0.05085050292294749
+        },
+        "grad_norm_forget": 14.89290812611013,
+        "grad_norm_forget_included": 9.57683540775029,
+        "grad_norm_retain": 5.322120326153471,
+        "grad_norm_retain_included": 3.294023010386937
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 154.7,
+      "seed": 0,
+      "step": 128
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 3.107696753934519e-06,
+        "conflict": 8.786260534854318e-06,
+        "grad_norm_forget": 2.0472253872583224e-05,
+        "grad_norm_retain": 4.400278339655728e-05,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5810514258466077,
+            "alpha_retain": 0.5035363776516143,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09994433074922586,
+              "alpha_forget_p2_5": 0.09957169949655817,
+              "alpha_forget_p97_5": 0.10118850215767344,
+              "alpha_retain_mean": 0.0999145275932086,
+              "alpha_retain_p2_5": 0.09977454594133144,
+              "alpha_retain_p97_5": 0.10012598383847991,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7566419257520015,
+            "alpha_retain": 0.6969663109737291,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.2236414500585489,
+              "alpha_forget_p2_5": 0.22268783991115082,
+              "alpha_forget_p97_5": 0.22575425859922513,
+              "alpha_retain_mean": 0.22351841665960465,
+              "alpha_retain_p2_5": 0.2233205025017647,
+              "alpha_retain_p97_5": 0.2240273151318449,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8274261515427108,
+            "alpha_retain": 0.7878441429218294,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.316018319878716,
+              "alpha_forget_p2_5": 0.31515637164641713,
+              "alpha_forget_p97_5": 0.31750940391797133,
+              "alpha_retain_mean": 0.3160954057803665,
+              "alpha_retain_p2_5": 0.31577313233433046,
+              "alpha_retain_p97_5": 0.31656157751950365,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.40474057083003534,
+        "conflict_included_blocks": 0.3969969093902485,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.00048387371688799385,
+          "p2_5": -0.006999141002158983,
+          "p97_5": 0.0066329004196784905
+        },
+        "grad_norm_forget": 33.706380852422996,
+        "grad_norm_forget_included": 24.977287290668563,
+        "grad_norm_retain": 5.095858449292474,
+        "grad_norm_retain_included": 3.61076447480236
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5810517622914283,
+            "alpha_retain": 0.5035380251135605,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.10001747918239474,
+              "alpha_forget_p2_5": 0.09947007312205462,
+              "alpha_forget_p97_5": 0.10259532093583855,
+              "alpha_retain_mean": 0.09988278026639968,
+              "alpha_retain_p2_5": 0.09968715953982048,
+              "alpha_retain_p97_5": 0.10031552110003729,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7566418338507583,
+            "alpha_retain": 0.696969418670483,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.2238563740935565,
+              "alpha_forget_p2_5": 0.22280136583813245,
+              "alpha_forget_p97_5": 0.22549245658841824,
+              "alpha_retain_mean": 0.2235818431934417,
+              "alpha_retain_p2_5": 0.22327737932544364,
+              "alpha_retain_p97_5": 0.22429806440966482,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8274259756114147,
+            "alpha_retain": 0.787846877549293,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3162391678194396,
+              "alpha_forget_p2_5": 0.3152090687913008,
+              "alpha_forget_p97_5": 0.31722726146229474,
+              "alpha_retain_mean": 0.3161418316328472,
+              "alpha_retain_p2_5": 0.3157469942769269,
+              "alpha_retain_p97_5": 0.3169275126116219,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.4047493570905702,
+        "conflict_included_blocks": 0.39700361720016747,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.0003716738613851389,
+          "p2_5": -0.008104253898235403,
+          "p97_5": 0.006005235352717291
+        },
+        "grad_norm_forget": 33.70640132467687,
+        "grad_norm_forget_included": 24.97729472316683,
+        "grad_norm_retain": 5.0958144465090776,
+        "grad_norm_retain_included": 3.610750631191244
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 143.9,
+      "seed": 0,
+      "step": 256
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified": true,
+      "certified_through": 512,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "modules_merged": 128,
+      "reduction_order_discrepancy": {
+        "alpha_retain_0.05": 1.6252695356211433e-07,
+        "conflict": 7.937578287091351e-06,
+        "grad_norm_forget": 0.0002585618466000028,
+        "grad_norm_retain": 7.308190131283254e-06,
+        "note": "gradients at frozen checkpoints on fixed probes are deterministic up to reduction order; this pair is the effective precision of every number downstream"
+      },
+      "replicate_0": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5678613928372336,
+            "alpha_retain": 0.4533431560578488,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.09996226232418019,
+              "alpha_forget_p2_5": 0.09948444254102894,
+              "alpha_forget_p97_5": 0.1013958264041814,
+              "alpha_retain_mean": 0.09993484606518711,
+              "alpha_retain_p2_5": 0.09967244283978585,
+              "alpha_retain_p97_5": 0.10107413864082918,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309833.6
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7446253808487926,
+            "alpha_retain": 0.659766847324912,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.2237433722241775,
+              "alpha_forget_p2_5": 0.2225657400308464,
+              "alpha_forget_p97_5": 0.22714521801055074,
+              "alpha_retain_mean": 0.22370341006805256,
+              "alpha_retain_p2_5": 0.22314227114429083,
+              "alpha_retain_p97_5": 0.2257395016777469,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226563419.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8174008921195638,
+            "alpha_retain": 0.7669006346903823,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.31604467860091384,
+              "alpha_forget_p2_5": 0.3149611592438458,
+              "alpha_forget_p97_5": 0.31841864837213657,
+              "alpha_retain_mean": 0.31623327401267953,
+              "alpha_retain_p2_5": 0.3156248256226254,
+              "alpha_retain_p97_5": 0.3175563198865712,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453117736.1
+            }
+          }
+        },
+        "conflict": 0.03305716623491326,
+        "conflict_included_blocks": 0.03766346847393622,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.0001403040401813174,
+          "p2_5": -0.0009878526911273815,
+          "p97_5": 0.001168824039425244
+        },
+        "grad_norm_forget": 59.61557783817102,
+        "grad_norm_forget_included": 45.28375457288974,
+        "grad_norm_retain": 7.520941031680086,
+        "grad_norm_retain_included": 5.698102509324109
+      },
+      "replicate_1": {
+        "alpha": {
+          "0.01": {
+            "alpha_forget": 0.5678614875544938,
+            "alpha_retain": 0.45334304951762316,
+            "coordinates_selected": 45310853,
+            "random_null": {
+              "alpha_forget_mean": 0.10023956542593375,
+              "alpha_forget_p2_5": 0.0994365237010495,
+              "alpha_forget_p97_5": 0.10551020823295808,
+              "alpha_retain_mean": 0.10011771678465928,
+              "alpha_retain_p2_5": 0.0997068766844995,
+              "alpha_retain_p97_5": 0.10216338340276036,
+              "draws": 20,
+              "isotropic_expectation": 0.1,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 45309430.550000004
+            }
+          },
+          "0.05": {
+            "alpha_forget": 0.7446254818932506,
+            "alpha_retain": 0.6597666847979584,
+            "coordinates_selected": 226554293,
+            "random_null": {
+              "alpha_forget_mean": 0.22405298632310905,
+              "alpha_forget_p2_5": 0.22267202262931446,
+              "alpha_forget_p97_5": 0.22765658620429735,
+              "alpha_retain_mean": 0.22379661204617865,
+              "alpha_retain_p2_5": 0.22317839637968775,
+              "alpha_retain_p97_5": 0.2257682284255968,
+              "draws": 20,
+              "isotropic_expectation": 0.22360679774997896,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 226551162.95000002
+            }
+          },
+          "0.10": {
+            "alpha_forget": 0.8174010461412763,
+            "alpha_retain": 0.7669004051957796,
+            "coordinates_selected": 453108560,
+            "random_null": {
+              "alpha_forget_mean": 0.3162684434035471,
+              "alpha_forget_p2_5": 0.31504419546733503,
+              "alpha_forget_p97_5": 0.3186208153709936,
+              "alpha_retain_mean": 0.31621728388937026,
+              "alpha_retain_p2_5": 0.31562711634184754,
+              "alpha_retain_p97_5": 0.31782839974907734,
+              "draws": 20,
+              "isotropic_expectation": 0.31622776601683794,
+              "mask_construction": "independent Bernoulli(k/N) per included coordinate; expected size k, not exact size k",
+              "mean_coordinates": 453105009.6
+            }
+          }
+        },
+        "conflict": 0.03304922865662617,
+        "conflict_included_blocks": 0.037658108172270326,
+        "conflict_null": {
+          "draws": 20,
+          "kind": "coordinate_wise_sign_shuffle_of_g_retain",
+          "mean": -0.0001289505169850864,
+          "p2_5": -0.0013871015705913578,
+          "p97_5": 0.0008515173052816999
+        },
+        "grad_norm_forget": 59.61583640001762,
+        "grad_norm_forget_included": 45.283733344647615,
+        "grad_norm_retain": 7.5209337234899545,
+        "grad_norm_retain_included": 5.698096895594063
+      },
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seconds": 168.3,
+      "seed": 0,
+      "step": 512
+    }
+  ]
+}

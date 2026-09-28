@@ -1,0 +1,818 @@
+{
+  "diagnostics": {
+    "null_model": {
+      "absolute_mismatch": 4.163336342344337e-17,
+      "draw_i_l_y_plugin_mean": 0.11288668275364162,
+      "expected_i_null_y": 0.09730376312460227,
+      "matched": true,
+      "p_correct": 0.41829692380827765,
+      "target_i_l_y_plugin": 0.09730376312460232
+    },
+    "rng_seeds": {
+      "bootstrap": [
+        42,
+        900379312,
+        128,
+        4
+      ],
+      "i_null": [
+        42,
+        900379312,
+        128,
+        1
+      ],
+      "mu_null_intact": [
+        42,
+        900379312,
+        128,
+        2
+      ],
+      "mu_null_shortcut": [
+        42,
+        900379312,
+        128,
+        3
+      ],
+      "null_model": [
+        42,
+        900379312,
+        128,
+        5
+      ]
+    }
+  },
+  "records": [
+    {
+      "ci95": {
+        "high": 0.06974633468592215,
+        "low": 0.015302288769736761,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": {
+        "kind": "label_permutation",
+        "mean": 0.012733708931787508,
+        "n_draws": 100,
+        "n_finite": 100,
+        "p2_5": 0.00430749944801877,
+        "p5": 0.00505395022530355,
+        "p50": 0.012558660026840585,
+        "p95": 0.022840588305480924,
+        "p97_5": 0.023383771980613487
+      },
+      "quantity": "i_t",
+      "reference": null,
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.026437856794149006
+    },
+    {
+      "ci95": {
+        "high": 0.1650754218971713,
+        "low": 0.06653458500561057,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "notes": [
+        "Amendment 1 Ruling 3: reference label information, the structural bound on mu"
+      ],
+      "null": null,
+      "quantity": "i_l_y_intact",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "exploratory",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.09730376312460232
+    },
+    {
+      "ci95": {
+        "high": 0.14920948934159672,
+        "low": 0.06737887209423925,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": null,
+      "quantity": "cmi_intact",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.05471255976789191
+    },
+    {
+      "ci95": {
+        "high": -0.02699545204421554,
+        "low": -0.10111399850467533,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": {
+        "kind": "item_wise_L_permutation",
+        "mean": -0.042761911203711526,
+        "n_draws": 100,
+        "n_finite": 100,
+        "p2_5": -0.06769283152620939,
+        "p5": -0.06304528407409045,
+        "p50": -0.04229414849346069,
+        "p95": -0.025892204867060856,
+        "p97_5": -0.022447147916848965
+      },
+      "quantity": "mu_intact",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": -0.028274702973742905
+    },
+    {
+      "ci95": {
+        "high": 0.034048268051372683,
+        "low": 0.006223162021584916,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "notes": [
+        "Amendment 1 Ruling 3: reference label information, the structural bound on mu"
+      ],
+      "null": null,
+      "quantity": "i_l_y_shortcut",
+      "reference": {
+        "name": "shortcut",
+        "path": "spec_e_outputs/references_grid_path/unfiltered-cb/options-only.jsonl",
+        "sha256": "1972f968f0bba63cf5a16844cdd19be96c79c3823c9db4ba4e9f55c083ade0b1"
+      },
+      "register": "exploratory",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.005478167004560941
+    },
+    {
+      "ci95": {
+        "high": 0.16761117521222363,
+        "low": 0.08220355872386863,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": null,
+      "quantity": "cmi_shortcut",
+      "reference": {
+        "name": "shortcut",
+        "path": "spec_e_outputs/references_grid_path/unfiltered-cb/options-only.jsonl",
+        "sha256": "1972f968f0bba63cf5a16844cdd19be96c79c3823c9db4ba4e9f55c083ade0b1"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.07483200085641606
+    },
+    {
+      "ci95": {
+        "high": -0.05272393482467182,
+        "low": -0.11574452812164632,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": {
+        "kind": "item_wise_L_permutation",
+        "mean": -0.04491306982373335,
+        "n_draws": 100,
+        "n_finite": 100,
+        "p2_5": -0.06963387237077254,
+        "p5": -0.06565457567734159,
+        "p50": -0.04309176124473346,
+        "p95": -0.03078184944968405,
+        "p97_5": -0.02954580812449411
+      },
+      "quantity": "mu_shortcut",
+      "reference": {
+        "name": "shortcut",
+        "path": "spec_e_outputs/references_grid_path/unfiltered-cb/options-only.jsonl",
+        "sha256": "1972f968f0bba63cf5a16844cdd19be96c79c3823c9db4ba4e9f55c083ade0b1"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": -0.04839414406226705
+    },
+    {
+      "ci95": {
+        "high": -0.4920917691826509,
+        "low": -5.348668550831255,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": null,
+      "quantity": "ratio",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": -1.069477877647042
+    },
+    {
+      "ci95": {
+        "high": -0.4920917691826509,
+        "low": -5.348668550831255,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "notes": [
+        "Amendment 1 Ruling 3, amended-post-exposure; no threshold is preregistered for this quantity"
+      ],
+      "null": null,
+      "quantity": "ratio_min",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "exploratory",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": -1.069477877647042
+    },
+    {
+      "ci95": {
+        "high": 1.0,
+        "low": 1.0,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "notes": [
+        "min(1, I(L_intact;Y) / I_t); the structural upper bound on ratio"
+      ],
+      "null": null,
+      "quantity": "ceiling",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "exploratory",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 1.0
+    },
+    {
+      "ci95": null,
+      "condition": "retain-only",
+      "estimator": "plugin",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": {
+        "kind": "accuracy_matched_random_reference",
+        "mean": -0.04234429201881682,
+        "n_draws": 100,
+        "n_finite": 100,
+        "p2_5": -0.06572139448609375,
+        "p5": -0.06375936479564386,
+        "p50": -0.04078163680476976,
+        "p95": -0.025381579651999654,
+        "p97_5": -0.024559584647227163
+      },
+      "quantity": "mu_null_model",
+      "reference": {
+        "matched": true,
+        "name": "null_model",
+        "p_correct": 0.41829692380827765,
+        "target_i_l_y_plugin": 0.09730376312460232
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": -0.04234429201881682
+    },
+    {
+      "ci95": {
+        "high": 0.057066397803108994,
+        "low": 0.0026223518869236072,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": {
+        "kind": "label_permutation",
+        "mean": 5.377204897435515e-05,
+        "n_draws": 100,
+        "n_finite": 100,
+        "p2_5": -0.008372437434794383,
+        "p5": -0.007625986657509604,
+        "p50": -0.00012127685597256889,
+        "p95": 0.01016065142266777,
+        "p97_5": 0.010703835097800332
+      },
+      "quantity": "i_t",
+      "reference": null,
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.013757919911335853
+    },
+    {
+      "ci95": {
+        "high": 0.1531351479991889,
+        "low": 0.05385464812279743,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "notes": [
+        "Amendment 1 Ruling 3: reference label information, the structural bound on mu"
+      ],
+      "null": null,
+      "quantity": "i_l_y_intact",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "exploratory",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.08462382624178916
+    },
+    {
+      "ci95": {
+        "high": 0.11169985595680965,
+        "low": 0.02623144195533728,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": null,
+      "quantity": "cmi_intact",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.009628339740111805
+    },
+    {
+      "ci95": {
+        "high": 0.001211586306918251,
+        "low": -0.07597948488606833,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": {
+        "kind": "item_wise_L_permutation",
+        "mean": -0.007708930132112494,
+        "n_draws": 100,
+        "n_finite": 100,
+        "p2_5": -0.03327501481581889,
+        "p5": -0.02933664329005279,
+        "p50": -0.0064887766303024594,
+        "p95": 0.010259309070739452,
+        "p97_5": 0.014183780855722373
+      },
+      "quantity": "mu_intact",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.004129580171224048
+    },
+    {
+      "ci95": {
+        "high": 0.021368331168559532,
+        "low": -0.006456774861228237,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "notes": [
+        "Amendment 1 Ruling 3: reference label information, the structural bound on mu"
+      ],
+      "null": null,
+      "quantity": "i_l_y_shortcut",
+      "reference": {
+        "name": "shortcut",
+        "path": "spec_e_outputs/references_grid_path/unfiltered-cb/options-only.jsonl",
+        "sha256": "1972f968f0bba63cf5a16844cdd19be96c79c3823c9db4ba4e9f55c083ade0b1"
+      },
+      "register": "exploratory",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": -0.0072017698782522125
+    },
+    {
+      "ci95": {
+        "high": 0.12889368030277407,
+        "low": 0.04092998199403716,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": null,
+      "quantity": "cmi_shortcut",
+      "reference": {
+        "name": "shortcut",
+        "path": "spec_e_outputs/references_grid_path/unfiltered-cb/options-only.jsonl",
+        "sha256": "1972f968f0bba63cf5a16844cdd19be96c79c3823c9db4ba4e9f55c083ade0b1"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.029747780828635953
+    },
+    {
+      "ci95": {
+        "high": -0.023760009003256165,
+        "low": -0.09000293170960927,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": {
+        "kind": "item_wise_L_permutation",
+        "mean": -0.01357953690442618,
+        "n_draws": 100,
+        "n_finite": 100,
+        "p2_5": -0.039723594614668116,
+        "p5": -0.03534576370615287,
+        "p50": -0.011186932382016132,
+        "p95": 0.0020441140193941934,
+        "p97_5": 0.003614503833105339
+      },
+      "quantity": "mu_shortcut",
+      "reference": {
+        "name": "shortcut",
+        "path": "spec_e_outputs/references_grid_path/unfiltered-cb/options-only.jsonl",
+        "sha256": "1972f968f0bba63cf5a16844cdd19be96c79c3823c9db4ba4e9f55c083ade0b1"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": -0.0159898609173001
+    },
+    {
+      "ci95": {
+        "high": 0.2178840603494032,
+        "low": -8.57607284772404,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": null,
+      "quantity": "ratio",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.3001602130145761
+    },
+    {
+      "ci95": {
+        "high": 0.2178840603494032,
+        "low": -8.57607284772404,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "notes": [
+        "Amendment 1 Ruling 3, amended-post-exposure; no threshold is preregistered for this quantity"
+      ],
+      "null": null,
+      "quantity": "ratio_min",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "exploratory",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 0.3001602130145761
+    },
+    {
+      "ci95": {
+        "high": 1.0,
+        "low": 1.0,
+        "n_finite": 500,
+        "resamples": 500
+      },
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "notes": [
+        "min(1, I(L_intact;Y) / I_t); the structural upper bound on ratio"
+      ],
+      "null": null,
+      "quantity": "ceiling",
+      "reference": {
+        "name": "intact",
+        "path": "spec_e_outputs/references_grid_path/unfiltered/full.jsonl",
+        "sha256": "e1cb67d5a2c34cb904ba001e501eb9a5287b7c0b1935e0286058bf36a17efc2a"
+      },
+      "register": "exploratory",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": 1.0
+    },
+    {
+      "ci95": null,
+      "condition": "retain-only",
+      "estimator": "mm",
+      "i_cleared": true,
+      "lr": "1e-05",
+      "lr_value": 1e-05,
+      "model": "unfiltered-cb",
+      "n": 512,
+      "null": {
+        "kind": "accuracy_matched_random_reference",
+        "mean": -0.005910606708867023,
+        "n_draws": 100,
+        "n_finite": 100,
+        "p2_5": -0.030499347589390543,
+        "p5": -0.028537317898940647,
+        "p50": -0.0040113865106703814,
+        "p95": 0.011938194160710626,
+        "p97_5": 0.013153179119239739
+      },
+      "quantity": "mu_null_model",
+      "reference": {
+        "matched": true,
+        "name": "null_model",
+        "p_correct": 0.41829692380827765,
+        "target_i_l_y_plugin": 0.09730376312460232
+      },
+      "register": "preregistered",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "source_table": {
+        "path": "spec_e_outputs/grid/spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0/predictions/step-128.jsonl",
+        "sha256": "f4ff7c5ee8ebc80775effcacf38c9d8bc8fb4c03e11cbca0b00b590a1e24f4af"
+      },
+      "step": 128,
+      "value": -0.005910606708867023
+    }
+  ],
+  "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+  "step": 128
+}

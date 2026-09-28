@@ -1,0 +1,60 @@
+{
+  "spec": "E",
+  "version": "2026-08-11-approved-amendment",
+  "execution_mode": "preflight_only",
+  "gpu_authorized": false,
+  "wmdp": {
+    "dataset": "EleutherAI/wmdp_bio_robust_mcqa",
+    "split": "robust",
+    "fisher_sample_size": 512,
+    "fisher_sample_seed": 0,
+    "target_train_size": 410,
+    "target_validation_size": 102,
+    "split_seed": 0,
+    "largest_component_stop_size": 410,
+    "assignment_rule": "largest-first_component-id_tiebreak_giant-to-T_entityless-to-V_exact-410",
+    "sensitivity_high_degree_threshold": 10
+  },
+  "models": [
+    {"name": "unfiltered", "hf_repo": "EleutherAI/deep-ignorance-unfiltered", "local_path": "/workspace/models/deep-ignorance/unfiltered", "revision": "c8df368ff247cb90b62e21e1689260701b3ff25a"},
+    {"name": "e2e-strong-filter", "hf_repo": "EleutherAI/deep-ignorance-e2e-strong-filter", "local_path": "/workspace/models/deep-ignorance/e2e-strong-filter", "revision": "b28797cd9b615104ba9d24e6900336253323e7cf"},
+    {"name": "unfiltered-cb", "hf_repo": "EleutherAI/deep-ignorance-unfiltered-cb", "local_path": "/workspace/models/deep-ignorance/unfiltered-cb", "revision": "69b0e5906124ef97da509530d7f8ed2de3d694ed"}
+  ],
+  "inputs": {
+    "question_inventory": "spec03_outputs/wmdp_questions.csv",
+    "entity_inventory": "spec03_outputs/wmdp_organisms.csv",
+    "topic_inventory": "spec03_outputs/wmdp_topics.csv",
+    "fisher_prompt_source": "/workspace/CB_probes/prompt_utils.py",
+    "fisher_driver": "/workspace/fisher_information/run_fisher_neox.py"
+  },
+  "training": {
+    "conditions": ["forget-T", "retain-only"],
+    "learning_rates": [0.00001, 0.00005, 0.0002],
+    "seeds": [0, 1],
+    "batch_size": 4,
+    "max_steps": 512,
+    "gradient_precision": "fp32",
+    "trainer": "HuggingFace Trainer or SFTTrainer",
+    "loss_masking": "completion-only",
+    "optimizer": "AdamW",
+    "scheduler": "linear",
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.01,
+    "gradient_clipping": 1.0,
+    "lora_rank": 256,
+    "lora_alpha": 512,
+    "target_module_suffixes": ["query_key_value", "attention.dense", "dense_h_to_4h", "dense_4h_to_h"],
+    "checkpoint_steps": [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
+  },
+  "evaluation": {
+    "mmlu_biology_subtasks": ["college_biology", "high_school_biology"],
+    "general_set": "MMLU-full",
+    "general_cap_per_subtask": 2000,
+    "collateral_repeats": 3,
+    "confidence_interval": "bootstrap",
+    "prediction_dtype": "fp32",
+    "shortcut_baseline": "options-only"
+  },
+  "fisher_add_on": {"authorized": true, "passes": 1, "require_prompt_parity": true, "require_revision_parity": true},
+  "future_real_pilot": {"requires_separate_gpu_authorization": true, "checkpoint": "unfiltered-cb", "condition": "retain-only", "through_step": 2, "evaluation_scope": "all-512"}
+}

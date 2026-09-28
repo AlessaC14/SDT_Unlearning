@@ -1,0 +1,35 @@
+{
+  "paths": {
+    "world": "spec04r_integrated_amend03/final_clean_world/counterfactual_world_v2.jsonl",
+    "scaffold": "spec04r_integrated_amend03/final_clean_world/scaffold_v3.json",
+    "schema": "spec04r_integrated_amend03/final_clean_world/attribute_schema_v2.json",
+    "context": "spec04r_integrated_amend03/final_clean_world/universe_context_v2.md",
+    "control_ids": "spec04r_integrated_amend03/final_clean_world/control_sample_ids_v3.csv"
+  },
+  "llm": {
+    "endpoint": "https://openrouter.ai/api/v1",
+    "api_key_env": "OpenRouter_key",
+    "model": "moonshotai/kimi-k2.5",
+    "temperature": 0.2,
+    "top_p": 1.0,
+    "timeout": 180,
+    "cache_dir": "spec05_cache",
+    "input_price_per_million": 0.375,
+    "output_price_per_million": 2.025
+  },
+  "pilot_derived_documents": 18,
+  "spine_target_tokens": 325000,
+  "spine_budget_share": 0.035,
+  "cross_reference_resolution_floor": 1.0,
+  "judge_llm": {
+    "endpoint": "https://openrouter.ai/api/v1",
+    "api_key_env": "OpenRouter_key",
+    "model": "moonshotai/kimi-k2.5",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "timeout": 180,
+    "cache_dir": "spec05_judge_cache",
+    "input_price_per_million": 0.375,
+    "output_price_per_million": 2.025
+  }
+}

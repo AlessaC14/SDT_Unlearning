@@ -1,0 +1,26 @@
+{
+  "status": "exploratory",
+  "spec": "G-factual-format-legibility",
+  "arm": "CORPUS_F",
+  "content_type": "factual",
+  "base_model": {
+    "id": "EleutherAI/deep-ignorance-unfiltered",
+    "revision": "c8df368ff247cb90b62e21e1689260701b3ff25a",
+    "revision_provenance": "Exact immutable unfiltered revision resolved by Spec E for cross-spec parity"
+  },
+  "evaluation": {
+    "classes": ["literal", "paraphrase", "inference"],
+    "outcomes": ["correct", "incorrect", "abstain"],
+    "conditions": ["no_context", "in_context"],
+    "contamination_ngram": 8,
+    "contamination_flag_strictly_greater_than_item_fraction": 0.5,
+    "literal_chance_reference": 0.25,
+    "literal_near_chance_standard_errors": 2,
+    "literal_high_legibility_strictly_greater_than": 0.7
+  },
+  "authorization": {
+    "model_execution": false,
+    "gpu": false,
+    "training_g2_g4": false
+  }
+}

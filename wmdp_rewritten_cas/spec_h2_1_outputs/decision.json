@@ -1,0 +1,551 @@
+{
+  "clearance_rule": "a step enters a summary only when H2's I_t clearance AND this spec's reference clearance both hold",
+  "descriptive": {
+    "e2e-strong-filter|forget-T": {
+      "ci_excludes_zero": false,
+      "majority_clears_null": false,
+      "majority_within_null_band": true,
+      "median_delta_excess": -0.006627342372948111,
+      "note": "computed identically and reported descriptively; no preregistered rule attaches to this cell family",
+      "outcome": "B_divergence",
+      "per_run": [
+        {
+          "cleared_steps": [
+            2,
+            8,
+            16,
+            32,
+            128,
+            256,
+            512
+          ],
+          "lr": "1e-05",
+          "median_delta_excess": -0.01771470579809456,
+          "mu_clears_null": 2,
+          "n_delta_excess": 7,
+          "run_id": "spec-e__e2e-strong-filter__forget-T__lr-1e-05__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 7,
+          "steps_i_cleared": 11,
+          "steps_reference_cleared": 7,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            8,
+            16,
+            128,
+            256
+          ],
+          "lr": "1e-05",
+          "median_delta_excess": -0.006627342372948111,
+          "mu_clears_null": 2,
+          "n_delta_excess": 4,
+          "run_id": "spec-e__e2e-strong-filter__forget-T__lr-1e-05__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 4,
+          "steps_i_cleared": 9,
+          "steps_reference_cleared": 5,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [],
+          "lr": "2e-04",
+          "median_delta_excess": null,
+          "mu_clears_null": 0,
+          "n_delta_excess": 0,
+          "run_id": "spec-e__e2e-strong-filter__forget-T__lr-2e-04__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 0,
+          "steps_i_cleared": 4,
+          "steps_reference_cleared": 1,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            1,
+            16
+          ],
+          "lr": "2e-04",
+          "median_delta_excess": 0.037457621406093836,
+          "mu_clears_null": 1,
+          "n_delta_excess": 2,
+          "run_id": "spec-e__e2e-strong-filter__forget-T__lr-2e-04__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 2,
+          "steps_i_cleared": 6,
+          "steps_reference_cleared": 2,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            4,
+            16,
+            256,
+            512
+          ],
+          "lr": "5e-05",
+          "median_delta_excess": -0.007718608964835089,
+          "mu_clears_null": 1,
+          "n_delta_excess": 4,
+          "run_id": "spec-e__e2e-strong-filter__forget-T__lr-5e-05__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 4,
+          "steps_i_cleared": 7,
+          "steps_reference_cleared": 4,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            8,
+            16,
+            32,
+            128,
+            256
+          ],
+          "lr": "5e-05",
+          "median_delta_excess": 0.03785683070276119,
+          "mu_clears_null": 2,
+          "n_delta_excess": 5,
+          "run_id": "spec-e__e2e-strong-filter__forget-T__lr-5e-05__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 5,
+          "steps_i_cleared": 9,
+          "steps_reference_cleared": 7,
+          "steps_total": 11
+        }
+      ],
+      "preregistered": false,
+      "reason": "excess_matched remains within its permutation-null band at a majority of jointly cleared steps",
+      "run_level_bootstrap": {
+        "ci95": [
+          -0.01771470579809456,
+          0.03785683070276119
+        ],
+        "median": -0.006627342372948111,
+        "n_runs": 5,
+        "resamples": 10000,
+        "seed": 42,
+        "unit": "run-level median of Delta-excess over jointly cleared steps"
+      },
+      "steps_cleared_both": 22,
+      "steps_where_mu_clears_null": 8
+    },
+    "e2e-strong-filter|retain-only": {
+      "ci_excludes_zero": true,
+      "majority_clears_null": true,
+      "majority_within_null_band": false,
+      "median_delta_excess": 0.0030339524600679468,
+      "note": "computed identically and reported descriptively; no preregistered rule attaches to this cell family",
+      "outcome": "A_staleness",
+      "per_run": [
+        {
+          "cleared_steps": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128,
+            256,
+            512
+          ],
+          "lr": "1e-05",
+          "median_delta_excess": 0.0013308595298588619,
+          "mu_clears_null": 11,
+          "n_delta_excess": 11,
+          "run_id": "spec-e__e2e-strong-filter__retain-only__lr-1e-05__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 11,
+          "steps_i_cleared": 11,
+          "steps_reference_cleared": 11,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128,
+            256,
+            512
+          ],
+          "lr": "1e-05",
+          "median_delta_excess": 0.002376629119802645,
+          "mu_clears_null": 11,
+          "n_delta_excess": 11,
+          "run_id": "spec-e__e2e-strong-filter__retain-only__lr-1e-05__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 11,
+          "steps_i_cleared": 11,
+          "steps_reference_cleared": 11,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "lr": "2e-04",
+          "median_delta_excess": 0.0036912758003332484,
+          "mu_clears_null": 5,
+          "n_delta_excess": 6,
+          "run_id": "spec-e__e2e-strong-filter__retain-only__lr-2e-04__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 6,
+          "steps_i_cleared": 6,
+          "steps_reference_cleared": 6,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            32
+          ],
+          "lr": "2e-04",
+          "median_delta_excess": 0.0021958515518899525,
+          "mu_clears_null": 5,
+          "n_delta_excess": 6,
+          "run_id": "spec-e__e2e-strong-filter__retain-only__lr-2e-04__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 6,
+          "steps_i_cleared": 6,
+          "steps_reference_cleared": 7,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128,
+            256,
+            512
+          ],
+          "lr": "5e-05",
+          "median_delta_excess": 0.006646231479358909,
+          "mu_clears_null": 11,
+          "n_delta_excess": 11,
+          "run_id": "spec-e__e2e-strong-filter__retain-only__lr-5e-05__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 11,
+          "steps_i_cleared": 11,
+          "steps_reference_cleared": 11,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128,
+            256,
+            512
+          ],
+          "lr": "5e-05",
+          "median_delta_excess": 0.006064627786193079,
+          "mu_clears_null": 11,
+          "n_delta_excess": 11,
+          "run_id": "spec-e__e2e-strong-filter__retain-only__lr-5e-05__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 11,
+          "steps_i_cleared": 11,
+          "steps_reference_cleared": 11,
+          "steps_total": 11
+        }
+      ],
+      "preregistered": false,
+      "reason": "median Delta-excess is positive with a run-level 95% interval excluding zero, and excess_matched clears its permutation-null band at a majority of jointly cleared steps",
+      "run_level_bootstrap": {
+        "ci95": [
+          0.0017633555408744072,
+          0.006355429632775994
+        ],
+        "median": 0.0030339524600679468,
+        "n_runs": 6,
+        "resamples": 10000,
+        "seed": 42,
+        "unit": "run-level median of Delta-excess over jointly cleared steps"
+      },
+      "steps_cleared_both": 56,
+      "steps_where_mu_clears_null": 54
+    },
+    "unfiltered-cb|forget-T": {
+      "ci_excludes_zero": true,
+      "majority_clears_null": true,
+      "majority_within_null_band": false,
+      "median_delta_excess": 0.043430042846094634,
+      "note": "computed identically and reported descriptively; no preregistered rule attaches to this cell family",
+      "outcome": "A_staleness",
+      "per_run": [
+        {
+          "cleared_steps": [
+            256
+          ],
+          "lr": "1e-05",
+          "median_delta_excess": 0.04265709088661389,
+          "mu_clears_null": 0,
+          "n_delta_excess": 1,
+          "run_id": "spec-e__unfiltered-cb__forget-T__lr-1e-05__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 1,
+          "steps_i_cleared": 1,
+          "steps_reference_cleared": 7,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [],
+          "lr": "1e-05",
+          "median_delta_excess": null,
+          "mu_clears_null": 0,
+          "n_delta_excess": 0,
+          "run_id": "spec-e__unfiltered-cb__forget-T__lr-1e-05__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 0,
+          "steps_i_cleared": 0,
+          "steps_reference_cleared": 5,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [],
+          "lr": "2e-04",
+          "median_delta_excess": null,
+          "mu_clears_null": 0,
+          "n_delta_excess": 0,
+          "run_id": "spec-e__unfiltered-cb__forget-T__lr-2e-04__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 0,
+          "steps_i_cleared": 0,
+          "steps_reference_cleared": 3,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [],
+          "lr": "2e-04",
+          "median_delta_excess": null,
+          "mu_clears_null": 0,
+          "n_delta_excess": 0,
+          "run_id": "spec-e__unfiltered-cb__forget-T__lr-2e-04__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 0,
+          "steps_i_cleared": 0,
+          "steps_reference_cleared": 1,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [],
+          "lr": "5e-05",
+          "median_delta_excess": null,
+          "mu_clears_null": 0,
+          "n_delta_excess": 0,
+          "run_id": "spec-e__unfiltered-cb__forget-T__lr-5e-05__seed-0",
+          "seed": 0,
+          "steps_cleared_both": 0,
+          "steps_i_cleared": 0,
+          "steps_reference_cleared": 3,
+          "steps_total": 11
+        },
+        {
+          "cleared_steps": [
+            64,
+            128,
+            256,
+            512
+          ],
+          "lr": "5e-05",
+          "median_delta_excess": 0.04420299480557538,
+          "mu_clears_null": 4,
+          "n_delta_excess": 4,
+          "run_id": "spec-e__unfiltered-cb__forget-T__lr-5e-05__seed-1",
+          "seed": 1,
+          "steps_cleared_both": 4,
+          "steps_i_cleared": 4,
+          "steps_reference_cleared": 6,
+          "steps_total": 11
+        }
+      ],
+      "preregistered": false,
+      "reason": "median Delta-excess is positive with a run-level 95% interval excluding zero, and excess_matched clears its permutation-null band at a majority of jointly cleared steps",
+      "run_level_bootstrap": {
+        "ci95": [
+          0.04265709088661389,
+          0.04420299480557538
+        ],
+        "median": 0.043430042846094634,
+        "n_runs": 2,
+        "resamples": 10000,
+        "seed": 42,
+        "unit": "run-level median of Delta-excess over jointly cleared steps"
+      },
+      "steps_cleared_both": 5,
+      "steps_where_mu_clears_null": 4
+    }
+  },
+  "h2_p1_p2_untouched": "H2's P1 and P2 remain not_evaluable; H2.1 answers a different question and does not re-treat them",
+  "preregistered": {
+    "ci_excludes_zero": true,
+    "conclusion": "recovery tracks the treated intact function; the pre-attack reference was stale; H2's near-null excess is a reference artifact",
+    "majority_clears_null": true,
+    "majority_within_null_band": false,
+    "median_delta_excess": 0.027809777597984586,
+    "outcome": "A_staleness",
+    "per_run": [
+      {
+        "cleared_steps": [
+          128,
+          256,
+          512
+        ],
+        "lr": "1e-05",
+        "median_delta_excess": -0.004388650364857936,
+        "mu_clears_null": 1,
+        "n_delta_excess": 3,
+        "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-0",
+        "seed": 0,
+        "steps_cleared_both": 3,
+        "steps_i_cleared": 3,
+        "steps_reference_cleared": 11,
+        "steps_total": 11
+      },
+      {
+        "cleared_steps": [
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "lr": "1e-05",
+        "median_delta_excess": 0.043721796587785966,
+        "mu_clears_null": 5,
+        "n_delta_excess": 5,
+        "run_id": "spec-e__unfiltered-cb__retain-only__lr-1e-05__seed-1",
+        "seed": 1,
+        "steps_cleared_both": 5,
+        "steps_i_cleared": 5,
+        "steps_reference_cleared": 11,
+        "steps_total": 11
+      },
+      {
+        "cleared_steps": [
+          16
+        ],
+        "lr": "2e-04",
+        "median_delta_excess": 0.011897758608183207,
+        "mu_clears_null": 1,
+        "n_delta_excess": 1,
+        "run_id": "spec-e__unfiltered-cb__retain-only__lr-2e-04__seed-0",
+        "seed": 0,
+        "steps_cleared_both": 1,
+        "steps_i_cleared": 1,
+        "steps_reference_cleared": 6,
+        "steps_total": 11
+      },
+      {
+        "cleared_steps": [
+          8,
+          16
+        ],
+        "lr": "2e-04",
+        "median_delta_excess": 0.006832961091958519,
+        "mu_clears_null": 2,
+        "n_delta_excess": 2,
+        "run_id": "spec-e__unfiltered-cb__retain-only__lr-2e-04__seed-1",
+        "seed": 1,
+        "steps_cleared_both": 2,
+        "steps_i_cleared": 2,
+        "steps_reference_cleared": 7,
+        "steps_total": 11
+      },
+      {
+        "cleared_steps": [
+          64,
+          128,
+          256,
+          512
+        ],
+        "lr": "5e-05",
+        "median_delta_excess": 0.054089045802969526,
+        "mu_clears_null": 4,
+        "n_delta_excess": 4,
+        "run_id": "spec-e__unfiltered-cb__retain-only__lr-5e-05__seed-0",
+        "seed": 0,
+        "steps_cleared_both": 4,
+        "steps_i_cleared": 4,
+        "steps_reference_cleared": 11,
+        "steps_total": 11
+      },
+      {
+        "cleared_steps": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ],
+        "lr": "5e-05",
+        "median_delta_excess": 0.049349459824801156,
+        "mu_clears_null": 6,
+        "n_delta_excess": 6,
+        "run_id": "spec-e__unfiltered-cb__retain-only__lr-5e-05__seed-1",
+        "seed": 1,
+        "steps_cleared_both": 6,
+        "steps_i_cleared": 6,
+        "steps_reference_cleared": 11,
+        "steps_total": 11
+      }
+    ],
+    "reason": "median Delta-excess is positive with a run-level 95% interval excluding zero, and excess_matched clears its permutation-null band at a majority of jointly cleared steps",
+    "run_level_bootstrap": {
+      "ci95": [
+        0.0012221553635502914,
+        0.05171925281388534
+      ],
+      "median": 0.027809777597984586,
+      "n_runs": 6,
+      "resamples": 10000,
+      "seed": 42,
+      "unit": "run-level median of Delta-excess over jointly cleared steps"
+    },
+    "steps_cleared_both": 21,
+    "steps_where_mu_clears_null": 19
+  },
+  "rule": {
+    "A_staleness": "median Delta-excess > 0 with the run-level bootstrap 95% CI excluding zero, AND excess_matched clears its permutation-null band at a majority of cleared steps",
+    "B_divergence": "excess_matched remains within its permutation-null band at a majority of cleared steps",
+    "C_partial": "anything else",
+    "band_equivalence": "excess = mu - a per-step constant, so excess clears its permutation band exactly when mu does; the mu band is used and both framings agree by construction",
+    "fixed_before_any_h2_1_number_existed": true,
+    "no_outcome_preferred": true,
+    "target": "unfiltered-cb / retain-only, aggregated over its six runs"
+  },
+  "spec": "H2.1",
+  "status": "complete"
+}

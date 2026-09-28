@@ -1,0 +1,272 @@
+{
+  "certification": {
+    "framework": "Spec R Amendment 3, inherited",
+    "rule": "a step counts as cleared for P1 when it is certified AND both gradient norms are nonzero"
+  },
+  "failures": [],
+  "phase": "0_audit",
+  "projector": {
+    "caveats": [
+      "P_r is a coordinate-subspace approximation to the retain-Fisher eigenspace: diagonal top-k, not an eigendecomposition. This is not a spectrum.",
+      "P_r is fixed at step 0; subspace drift under finetuning is a known unknown, probed once in the section 4 scoped optional."
+    ],
+    "definition": "P_r is the coordinate mask of the top-k entries of that MODEL's own step-0 retain-Fisher diagonal (MMLU-bio 454)",
+    "k_fractions": [
+      0.01,
+      0.05,
+      0.1
+    ],
+    "models": {
+      "e2e-strong-filter": {
+        "all_blocks": 388,
+        "all_numel": 6856253440,
+        "excluded_rule": "rank-deficient blocks and layers 30-31 excluded, matching the Fisher study's conservative treatment",
+        "included_blocks": 302,
+        "included_numel": 4531085312,
+        "model": "e2e-strong-filter",
+        "source": "/workspace/fisher_information/fisher_neox_e2e-strong-filter_mmlu_bio.json",
+        "thresholds": {
+          "0.01": {
+            "fraction_at_threshold": 0.010000000856306984,
+            "fraction_target": 0.01,
+            "k_at_threshold": 45310857,
+            "k_target": 45310853,
+            "threshold": 3.812031764027779e-06
+          },
+          "0.05": {
+            "fraction_at_threshold": 0.050000002295255835,
+            "fraction_target": 0.05,
+            "k_at_threshold": 226554276,
+            "k_target": 226554266,
+            "threshold": 1.2140728813392343e-06
+          },
+          "0.10": {
+            "fraction_at_threshold": 0.10000000856306984,
+            "fraction_target": 0.1,
+            "k_at_threshold": 453108570,
+            "k_target": 453108531,
+            "threshold": 6.796191769353754e-07
+          }
+        }
+      },
+      "unfiltered": {
+        "all_blocks": 388,
+        "all_numel": 6856253440,
+        "excluded_rule": "rank-deficient blocks and layers 30-31 excluded, matching the Fisher study's conservative treatment",
+        "included_blocks": 302,
+        "included_numel": 4531085312,
+        "model": "unfiltered",
+        "source": "/workspace/fisher_information/fisher_neox_unfiltered_mmlu_bio.json",
+        "thresholds": {
+          "0.01": {
+            "fraction_at_threshold": 0.009999999973516279,
+            "fraction_target": 0.01,
+            "k_at_threshold": 45310853,
+            "k_target": 45310853,
+            "threshold": 3.6470307804847835e-06
+          },
+          "0.05": {
+            "fraction_at_threshold": 0.05000000604711633,
+            "fraction_target": 0.05,
+            "k_at_threshold": 226554293,
+            "k_target": 226554266,
+            "threshold": 1.1424231161072385e-06
+          },
+          "0.10": {
+            "fraction_at_threshold": 0.10000000635609307,
+            "fraction_target": 0.1,
+            "k_at_threshold": 453108560,
+            "k_target": 453108531,
+            "threshold": 6.325781782834383e-07
+          }
+        }
+      },
+      "unfiltered-cb": {
+        "all_blocks": 388,
+        "all_numel": 6856253440,
+        "excluded_rule": "rank-deficient blocks and layers 30-31 excluded, matching the Fisher study's conservative treatment",
+        "included_blocks": 302,
+        "included_numel": 4531085312,
+        "model": "unfiltered-cb",
+        "source": "/workspace/fisher_information/fisher_neox_unfiltered-cb_mmlu_bio.json",
+        "thresholds": {
+          "0.01": {
+            "fraction_at_threshold": 0.010000001077004661,
+            "fraction_target": 0.01,
+            "k_at_threshold": 45310858,
+            "k_target": 45310853,
+            "threshold": 2.3841828806325793e-05
+          },
+          "0.05": {
+            "fraction_at_threshold": 0.0500000007503721,
+            "fraction_target": 0.05,
+            "k_at_threshold": 226554269,
+            "k_target": 226554266,
+            "threshold": 5.8081000133825e-06
+          },
+          "0.10": {
+            "fraction_at_threshold": 0.10000000017655813,
+            "fraction_target": 0.1,
+            "k_at_threshold": 453108532,
+            "k_target": 453108531,
+            "threshold": 2.9268146590766264e-06
+          }
+        }
+      }
+    }
+  },
+  "spec": "G",
+  "status": "ready",
+  "tier_1_cells": [
+    {
+      "adapter_key": "spec-e__e2e-strong-filter__forget-T__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified_through": 256,
+      "certified_through_original": null,
+      "condition": "forget-T",
+      "lr": "1e-05",
+      "model": "e2e-strong-filter",
+      "run_id": "spec-e__e2e-strong-filter__forget-T__lr-1e-05__seed-0",
+      "seed": 0,
+      "steps": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "view": "V_102"
+    },
+    {
+      "adapter_key": "spec-e__e2e-strong-filter__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified_through": 512,
+      "certified_through_original": null,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "e2e-strong-filter",
+      "run_id": "spec-e__e2e-strong-filter__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "steps": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "view": "full_512"
+    },
+    {
+      "adapter_key": "spec-e__unfiltered-cb__forget-T__lr-5e-05__seed-1__a2rerun",
+      "adapter_source": "amendment_2_ruling_1_rerun",
+      "certified_through": 128,
+      "certified_through_original": 16,
+      "condition": "forget-T",
+      "lr": "5e-05",
+      "model": "unfiltered-cb",
+      "run_id": "spec-e__unfiltered-cb__forget-T__lr-5e-05__seed-1",
+      "seed": 1,
+      "steps": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "view": "V_102"
+    },
+    {
+      "adapter_key": "spec-e__unfiltered-cb__retain-only__lr-5e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified_through": 512,
+      "certified_through_original": null,
+      "condition": "retain-only",
+      "lr": "5e-05",
+      "model": "unfiltered-cb",
+      "run_id": "spec-e__unfiltered-cb__retain-only__lr-5e-05__seed-0",
+      "seed": 0,
+      "steps": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "view": "full_512"
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__forget-T__lr-1e-05__seed-0__a2rerun",
+      "adapter_source": "amendment_2_ruling_1_rerun",
+      "certified_through": 32,
+      "certified_through_original": 32,
+      "condition": "forget-T",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "run_id": "spec-e__unfiltered__forget-T__lr-1e-05__seed-0",
+      "seed": 0,
+      "steps": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "view": "V_102"
+    },
+    {
+      "adapter_key": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "adapter_source": "original_run",
+      "certified_through": 512,
+      "certified_through_original": null,
+      "condition": "retain-only",
+      "lr": "1e-05",
+      "model": "unfiltered",
+      "run_id": "spec-e__unfiltered__retain-only__lr-1e-05__seed-0",
+      "seed": 0,
+      "steps": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "view": "full_512"
+    }
+  ]
+}

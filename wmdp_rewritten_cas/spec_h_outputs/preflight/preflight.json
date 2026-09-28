@@ -1,0 +1,47 @@
+{
+  "config_path": "/workspace/wmdp_rewritten_cas/configs/spec_h.json",
+  "config_sha256": "d88e6112dc80cdf21a7e2d8cf6b9db6fbae11b6bdc5f482e447ffb35da213567",
+  "contract_ambiguities": [
+    {
+      "contract": "primary_binary_definition",
+      "reason": "Spec H says to reduce F_t, L, and Y to correct/incorrect. F_t and L can be correctness indicators relative to Y, but a gold-label correctness indicator is constant 1. Its mutual information is identically zero. A binding amendment must choose a non-degenerate binary construction (for example preregistered one-vs-rest label decompositions) before the primary estimator is reportable."
+    }
+  ],
+  "discovered_inputs": {
+    "pre_attack_predictions": [],
+    "relearning_predictions": [],
+    "shortcut_predictions": []
+  },
+  "estimation_contract": {
+    "bootstrap_resamples": 1000,
+    "degenerate_ratio": "undefined_null",
+    "forget_T_regime": "binary_only_after_protocol_amendment",
+    "negative_mu": "reported_without_clipping",
+    "null_draws": 20,
+    "null_mi_tolerance_bits": 0.0005,
+    "secondary": "four-way plug-in plus Miller-Madow on every entropy term"
+  },
+  "gpu_used": false,
+  "missing_prerequisites": [
+    {
+      "artifact": "relearning_predictions",
+      "expected_path": "/workspace/wmdp_rewritten_cas/spec_e_outputs/predictions/relearning",
+      "reason": "no JSONL prediction tables"
+    },
+    {
+      "artifact": "pre_attack_predictions",
+      "expected_path": "/workspace/wmdp_rewritten_cas/spec_e_outputs/predictions/pre_attack",
+      "reason": "no JSONL prediction tables"
+    },
+    {
+      "artifact": "shortcut_predictions",
+      "expected_path": "/workspace/wmdp_rewritten_cas/spec_e_outputs/predictions/shortcut",
+      "reason": "no JSONL prediction tables"
+    }
+  ],
+  "model_execution": false,
+  "models_loaded": false,
+  "recorded_utc": "2026-08-11T06:40:57.049119+00:00",
+  "spec": "H",
+  "status": "stopped"
+}

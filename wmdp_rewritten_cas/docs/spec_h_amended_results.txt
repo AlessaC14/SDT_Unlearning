@@ -1,0 +1,116 @@
+SPEC H MUTUAL-INFORMATION RESULTS — AMENDED EXACT-PATH RUN
+Generated: 2026-08-12 UTC
+
+STATUS
+------
+Complete. The amended decomposition contains 1,188 records and zero failed
+jobs: 396 Tier 1, 396 diagnostic Tier 2, and 396 Tier 3 records. The Spec H
+test suite passes 8/8.
+
+Machine-readable results:
+  /workspace/wmdp_rewritten_cas/spec_h_outputs/final/info_decomposition.json
+
+BASELINE-VERSUS-GRID DIAGNOSIS
+------------------------------
+Same 512 questions; margins below are computed only on argmax disagreements.
+
+checkpoint            disagreement     baseline margin   grid margin   max TV
+unfiltered             15/512  2.93%        0.007220       0.000000    0.025240
+e2e-strong-filter      30/512  5.86%        0.012848       0.000000    0.029678
+unfiltered-cb          10/512  1.95%        0.014378       0.006461    0.035450
+
+CB is not the outlier. Strong-filter has the largest disagreement rate. The
+exact zero grid margins for changed unfiltered and strong-filter items show
+that bf16-path ties are the dominant cause; CB includes small nonzero near
+ties. Full audit: spec_h_outputs/disagreement_audit/{audit.txt,audit.json}.
+
+REFERENCE REGENERATION AND HARD GATE
+------------------------------------
+All references were freshly evaluated without training through the exact Spec
+E grid path: fp32 checkpoint load, fresh rank-256/alpha-512 all-linear PEFT
+wrapper whose initial LoRA delta is zero, bf16 CUDA autocast, the identical
+colon-position hidden-state readout, fp32 softmax, and float32 storage.
+
+Each fresh full reference was compared with all six retain-only step-zero
+tables for its checkpoint. All 18 comparisons passed:
+
+checkpoint             cells passing   min argmax consistency   max prob delta
+unfiltered                  6/6                1.000000                 0
+e2e-strong-filter           6/6                1.000000                 0
+unfiltered-cb               6/6                1.000000                 0
+
+This is exact table equality, stronger than the requested floating-point
+tolerance. Gate record: spec_h_outputs/reference_parity/{parity.txt,parity.json}.
+
+REPORTING TIERS
+---------------
+Tier 1 is native four-way I(F_t;Y). Plugin and Miller--Madow estimates are
+reported. Forget-T uses Tier 1 only at N=102; retain-only uses N=512.
+
+Tier 2 is RETIRED AS A RATIO. Its computed values remain in JSON, relabelled
+as diagnostic information associated with the pattern of reference
+correctness. Neither Tier 2 mu nor its ratio is reported or interpreted.
+
+Tier 3 is the full four-way I(F_t;Y|L) functional comparison. Both plugin and
+Miller--Madow point values are retained. Its mu and ratio are reported as
+indicative because the 64-cell joint averages only about eight samples/cell.
+
+SELECTED PEAK-ACCURACY CHECKPOINTS
+----------------------------------
+Selection is by primary full-512 WMDP accuracy, not MI. If accuracy ties,
+lexical run ID then earliest step is used deterministically.
+
+unfiltered: lr=1e-5 seed=0 step=256
+  accuracy full/V: 50.20% / 42.16%
+  Tier 3 ratio, intact:   MM  0.327; plugin  0.215; null mean  0.025
+  Tier 3 ratio, shortcut: MM -0.127; plugin -0.238; null mean  0.008
+
+e2e-strong-filter: lr=1e-5 seed=0 step=128
+  accuracy full/V: 40.23% / 36.27%
+  Tier 3 ratio, intact:   MM  0.386; plugin  0.014; null mean -0.049
+  Tier 3 ratio, shortcut: MM -0.088; plugin -0.416; null mean -0.052
+  Note: two other checkpoints tie at 40.23%; this representative is selected
+  by the deterministic rule above, not because its MI is favorable.
+
+unfiltered-cb: lr=5e-5 seed=0 step=256
+  accuracy full/V: 48.05% / 40.20%
+  Tier 3 ratio, intact:   MM  0.170; plugin  0.027; null mean  0.020
+  Tier 3 ratio, shortcut: MM -0.118; plugin -0.286; null mean -0.017
+
+The selected points show positive MM intact-reference ratios and negative
+shortcut-reference ratios, but plugin estimates are much weaker for
+strong-filter and CB. This estimator dependence is substantive. Tier 3 is
+indicative, not confirmatory.
+
+SELF-CONSISTENCY INTERPRETATION
+-------------------------------
+For unfiltered attacked step zero versus the intact unfiltered reference, all
+six runs give plugin ratio exactly 1.0 and MM ratio
+0.9999999999999948. The three-checkpoint parity gate above separately compares
+each checkpoint against its own freshly regenerated reference and is exactly
+1.000000 for all 18 tables. In the scientific decomposition, the common
+"intact" reference remains unfiltered, so strong-filter and CB are not
+artificially compared to themselves.
+
+MILLER--MADOW / BOOTSTRAP CAVEAT
+--------------------------------
+Corrected Tier 3 point estimates can lie outside their percentile bootstrap
+intervals because occupied-cell counts, and therefore the correction, vary
+across resamples at roughly eight samples per cell. This is a real small-cell
+instability. It is reported directly; no estimator was substituted to hide it.
+
+PRESERVATION
+------------
+The mismatched-baseline run is preserved immutably at:
+  spec_h_outputs/diagnostic_run_baseline_path_mismatch_20260812/
+Its SNAPSHOT_MANIFEST.json records SHA-256 and byte count for 1,190 files.
+A second untouched working-copy archive is at:
+  spec_h_outputs/diagnostic_run_baseline_path_mismatch_working_copy_20260812/
+
+BOTTOM LINE
+-----------
+The reference mismatch is understood and corrected without rewriting history.
+CB did not exhibit anomalously high disagreement. Exact-path self-consistency
+passes at probability level. Tier 1 and indicative Tier 3 are the reportable
+results; Tier 2 remains machine-readable only as a correctness-pattern
+diagnostic and has no reported mu or ratio.

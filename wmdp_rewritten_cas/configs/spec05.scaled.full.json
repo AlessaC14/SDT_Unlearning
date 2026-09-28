@@ -1,0 +1,138 @@
+{
+  "cross_reference_resolution_floor": 1.0,
+  "derived_g2_policy_revision": "claim-realization-v3-feedback",
+  "judge_llm": {
+    "api_key_env": "OpenRouter_key",
+    "cache_dir": "scaled_textbook_judge_cache_v1",
+    "endpoint": "https://openrouter.ai/api/v1",
+    "input_price_per_million": 0.375,
+    "model": "moonshotai/kimi-k2.5",
+    "output_price_per_million": 2.025,
+    "temperature": 0.0,
+    "timeout": 180,
+    "top_p": 1.0
+  },
+  "llm": {
+    "api_key_env": "OpenRouter_key",
+    "cache_dir": "scaled_textbook_cache_v1",
+    "endpoint": "https://openrouter.ai/api/v1",
+    "input_price_per_million": 0.375,
+    "model": "moonshotai/kimi-k2.5",
+    "output_price_per_million": 2.025,
+    "temperature": 0.2,
+    "timeout": 180,
+    "top_p": 1.0,
+    "whole_call_wall_timeout_seconds": 900
+  },
+  "paths": {
+    "context": "spec04r_integrated_amend03/final_clean_world/universe_context_v2.md",
+    "control_ids": "spec04r_integrated_amend03/final_clean_world/control_sample_ids_v3.csv",
+    "scaffold": "scaled_corpus_v1/textbook_inputs_v1/scaffold_v3.json",
+    "schema": "spec04r_integrated_amend03/final_clean_world/attribute_schema_v2.json",
+    "world": "scaled_corpus_v1/textbook_inputs_v1/counterfactual_world_v2.jsonl"
+  },
+  "pilot_derived_documents": 18,
+  "raw_log_policy": {
+    "classification": "private_measurement_artifact",
+    "human_report_forbidden": true,
+    "stdout_forbidden": true,
+    "verbatim_required": true
+  },
+  "spine_augmentation_acceptance_revision": "progressive-completion-v8-explicit-prompt-deployed",
+  "spine_augmentation_final_prompt_oversubscription": 2.0,
+  "spine_augmentation_final_revision": "progressive-final-v5-cumulative-four",
+  "spine_augmentation_generation_revision": "near-floor-v1",
+  "spine_augmentation_margin_share": 0.05,
+  "spine_augmentation_max_added_canonical_share": 0.5,
+  "spine_augmentation_max_prompt_share": 0.75,
+  "spine_augmentation_max_rounds": 2,
+  "spine_augmentation_max_segments_total": 5,
+  "spine_augmentation_migration_source_revisions": [
+    "near-floor-v1",
+    "progressive-completion-v1",
+    "progressive-completion-v2",
+    "progressive-completion-v3",
+    "progressive-completion-v4-low-seed-final-gates",
+    "progressive-completion-v5-cumulative-four",
+    "progressive-final-v2",
+    "progressive-final-v4-low-seed-final-gates",
+    "progressive-final-v5-cumulative-four",
+    "progressive-completion-v6-identity-retry",
+    "progressive-completion-v7-explicit-identity-length",
+    "progressive-completion-v8-explicit-prompt-deployed"
+  ],
+  "spine_augmentation_min_canonical_share": 0.2,
+  "spine_augmentation_min_floor_share": 0.0,
+  "spine_augmentation_min_margin_tokens": 64,
+  "spine_augmentation_prompt_oversubscription": 2.0,
+  "spine_augmentation_revision": "near-floor-v1",
+  "spine_augmentation_token_tolerance": [
+    0.8,
+    1.5
+  ],
+  "spine_budget_share": 0.035,
+  "spine_chapter_token_tolerance_overrides": {
+    "CH-05": [
+      0.8,
+      1.25
+    ]
+  },
+  "spine_chunk_overlap_tokens": 32,
+  "spine_generation_oversubscription": 1.75,
+  "spine_length_proactive_consecutive_threshold": 3,
+  "spine_length_proactive_revision": "length-proactive-v1",
+  "spine_length_recovery_prompt_oversubscription": 2.5,
+  "spine_length_recovery_revision": "length-recovery-v1",
+  "spine_overview_entity_batch_size": 8,
+  "spine_part_policy_revision": "length-v3",
+  "spine_part_revision_overrides": {},
+  "spine_part_token_tolerance": [
+    0.6,
+    1.75
+  ],
+  "spine_prior_section_max_chars": 24000,
+  "spine_running_summary_max_chars": 12000,
+  "spine_scalable_part_policy_revision": "length-v4-scalable",
+  "spine_supplement_margin_share": 0.03,
+  "spine_supplement_min_margin_tokens": 256,
+  "spine_supplement_policy_revision": "underlength-v1",
+  "spine_supplement_prompt_oversubscription": 1.1,
+  "spine_supplement_token_tolerance": [
+    0.8,
+    1.4
+  ],
+  "spine_target_tokens": 325000,
+  "spine_terminal_prompt_oversubscription_overrides": {
+    "CH-02-S01-P021": 2.0,
+    "CH-02-S01-P024": 1.75,
+    "CH-03-S01-P000": 1.4,
+    "CH-03-S01-P001": 1.25,
+    "CH-03-S01-P008": 1.25,
+    "CH-03-S01-P010": 1.35,
+    "CH-06-S01-P000": 1.75,
+    "CH-06-S02-P007": 1.35
+  },
+  "spine_terminal_revision_overrides": {
+    "CH-01-S01-P002": "polarity-retry-v1",
+    "CH-01-S01-P003": "exclusion-retry-v1",
+    "CH-01-S01-P005": "length-retry-v2",
+    "CH-01-S01-P006": "length-retry-v3",
+    "CH-01-S01-P040": "consistency-retry-v1",
+    "CH-01-S01-P042": "taxonomy-safe-length-retry-v1",
+    "CH-02-S01-P000": "explicit-identity-length-v1",
+    "CH-02-S01-P005": "extended-transport-window-v1",
+    "CH-02-S01-P021": "exclusion-length-retry-v1",
+    "CH-02-S01-P024": "polarity-exclusion-compact-v1",
+    "CH-03-S01-P000": "polarity-length-name-scope-v1",
+    "CH-03-S01-P001": "length-polarity-compact-v1",
+    "CH-03-S01-P008": "length-compact-direct-v1",
+    "CH-03-S01-P010": "polarity-reference-clean-v1",
+    "CH-06-S01-P000": "schema-transport-retry-v1",
+    "CH-06-S02-P007": "g1-forbidden-clean-v1"
+  },
+  "spine_token_tolerance": [
+    0.8,
+    1.2
+  ],
+  "spine_transport_recovery_revision": "transport-retry-v1"
+}
